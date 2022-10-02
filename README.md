@@ -1,3 +1,8 @@
+Note: Modified version to fix screen brightness OSD for T60p
+Original files at http://savannah.nongnu.org/download/tpb/
+
+---
+
 tpb - program to use the IBM ThinkPad(tm) special keys
 
 All the information used in this program was gathered by observing the device
