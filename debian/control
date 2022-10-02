@@ -1,0 +1,15 @@
+Source: tpb
+Section: utils
+Priority: extra
+Maintainer: Markus Braun <mbr@debian.org>
+Build-Depends: debhelper (>= 4.1.16), xlibs-dev, libxosd-dev, gettext
+Standards-Version: 3.6.1.1
+
+Package: tpb
+Architecture: i386
+Depends: makedev, debconf, ${shlibs:Depends}
+Suggests: xfonts-base-transcoded
+Description: program to use the IBM ThinkPad(tm) special keys
+ This program enables the IBM Thinkpad(tm) special keys. It is possible to bind
+ a program to the ThinkPad button. It has a on-screen display (OSD) to show
+ volume, mute and brightness of the LCD.

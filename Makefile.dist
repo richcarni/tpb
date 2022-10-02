@@ -1,0 +1,64 @@
+default: all
+
+all:
+	aclocal -I ./aclocal
+	autoheader
+	automake --foreign --copy --add-missing
+	autoconf
+	[ `which cvs2cl` ] && cvs2cl -S --no-wrap -P || touch ChangeLog
+
+dist:
+	aclocal -I ./aclocal
+	autoheader
+	automake --foreign --copy --add-missing --include-deps
+	autoconf
+	[ `which cvs2cl` ] && cvs2cl -S --no-wrap -P || touch ChangeLog
+	rm -Rf `find . -type d -name CVS`
+	rm -f `find . -type f -name .cvsignore`
+
+
+clean:
+	rm -rf \
+	ChangeLog \
+	ChangeLog.bak \
+	Makefile \
+	Makefile.in \
+	aclocal.m4 \
+	build-stamp \
+	config.cache \
+	config.guess \
+	config.h \
+	config.h.in \
+	config.log \
+	config.status \
+	config.sub \
+	configure \
+	debian/files \
+	debian/tpb \
+	debian/tpb.postinst.debhelper \
+	debian/tpb.postrm.debhelper \
+	debian/tpb.prerm.debhelper \
+	debian/tpb.substvars \
+	debian/usr \
+	doc/Makefile \
+	doc/Makefile.in \
+	install-sh \
+	intl/Makefile \
+	man/Makefile \
+	man/Makefile.in \
+	missing \
+	mkinstalldirs \
+	po/Makefile \
+	po/Makefile.in \
+	po/POTFILES \
+	po/da.gmo \
+	po/de.gmo \
+	po/ru.gmo \
+	src/.deps \
+	src/Makefile \
+	src/Makefile.in \
+	src/cfg.o \
+	src/tpb \
+	src/tpb.o \
+	stamp-h \
+	stamp-h.in \

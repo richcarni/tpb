@@ -1,0 +1,75 @@
+#
+#    Translators, if you are not familiar with the PO format, gettext
+#    documentation is worth reading, especially sections dedicated to
+#    this format, e.g. by running:
+#         info -n '(gettext)PO Files'
+#         info -n '(gettext)Header Entry'
+#    Some information specific to po-debconf are available at
+#            /usr/share/doc/po-debconf/README-trans
+#         or http://www.debian.org/intl/l10n/po-debconf/README-trans#
+#    Developers do not need to manually edit POT or PO files.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: tpb_0.5.1-1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2004-08-19 16:56+0200\n"
+"PO-Revision-Date: 2004-08-19 22:00+0200\n"
+"Last-Translator: Michel Grentzinger <mic.grentz@online.fr>\n"
+"Language-Team: French <debian-l10n-french@lists.debian.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=ISO-8859-15\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. Type: note
+#. Description
+#: ../tpb.templates:3
+msgid "Group for tpb users changed!"
+msgstr "Changement du groupe de tpb"
+
+#. Type: note
+#. Description
+#: ../tpb.templates:3
+msgid ""
+"The group of the device file used by tpb changed. Note that you have to move "
+"the tpb users from the old group \"thinkpad\" to the new group \"nvram\"!"
+msgstr ""
+"Le groupe propriétaire du fichier de périphérique utilisé par tpb a changé. "
+"Veuillez noter que vous devez déplacer les utilisateurs de tpb de l'ancien "
+"groupe « thinkpad » vers le nouveau groupe « nvram »."
+
+#. Type: boolean
+#. Description
+#: ../tpb.templates:10
+msgid "Create special device file?"
+msgstr "Faut-il créer un fichier spécial de périphérique ?"
+
+#. Type: boolean
+#. Description
+#: ../tpb.templates:10
+msgid ""
+"tpb needs a special device file to access the information about pressed "
+"buttons. Users who should be able to use tpb must be in the group nvram."
+msgstr ""
+"Tpb a besoin d'un fichier spécial de périphérique afin d'accéder aux "
+"informations sur les boutons appuyés. Les utilisateurs qui sont autorisés à "
+"utiliser tpb doivent faire partie du groupe « nvram »."
+
+#. Type: boolean
+#. Description
+#: ../tpb.templates:17
+msgid "Start tpb automatically?"
+msgstr "Faut-il démarrer tpb automatiquement ?"
+
+#. Type: boolean
+#. Description
+#: ../tpb.templates:17
+msgid ""
+"tpb can be started automatically after X has been started for a user. That "
+"can be either after startx from console or after login with a display "
+"manager."
+msgstr ""
+"Tpb peut être démarré automatiquement une fois que le serveur X a été lancé "
+"pour un utilisateur. Ce démarrage automatique peut se faire aussi bien "
+"lorsque le serveur est lancé par la commande « startx » que lorsque "
+"l'utilisateur ouvre une session avec un gestionnaire graphique de sessions."

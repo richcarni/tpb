@@ -1,0 +1,28 @@
+#!/bin/sh
+
+PACKAGE="tpb"
+CONFIG="/etc/default/$PACKAGE"
+CONFIG_OLD="/etc/X11/Xsession.d/90tpb"
+
+set -e
+. /usr/share/debconf/confmodule || exit 0
+
+# load data from old configuration file into debconf
+if [ -f $CONFIG_OLD ]; then
+  . $CONFIG_OLD
+
+  if ! [ -z $START_TPB ]; then
+    db_set $PACKAGE/autostart $START_TPB
+  fi
+fi
+
+# override with data from new configuration
+if [ -f $CONFIG ]; then
+  . $CONFIG
+
+  if ! [ -z $START_TPB ]; then
+    db_set $PACKAGE/autostart $START_TPB
+  fi
+fi
+
+exit 0

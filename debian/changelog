@@ -1,0 +1,120 @@
+tpb (0.6.4-1) unstable; urgency=low
+
+  * New upstream release (Closes: #303193, #318381)
+
+ -- Markus Braun <mbr@debian.org>  Mon, 25 Jul 2005 10:48:00 +0200
+
+tpb (0.6.3-2) unstable; urgency=low
+
+  * Include Czech translation of tpb debconf messages (Closes: #294747)
+  * Disable writing for members of group "nvram" to /dev/nvram by default
+    (Closes: #288042)
+  * Hint in manual page about the need for the complete path to
+    executables (Closes: #277311)
+
+ -- Markus Braun <mbr@debian.org>  Wed, 16 Feb 2005 14:31:24 +0100
+
+tpb (0.6.3-1) unstable; urgency=low
+
+  * new upstream version
+  * support udev (Closes: #247575, #266816)
+
+ -- Markus Braun <mbr@debian.org>  Mon, 23 Aug 2004 13:02:21 +0200
+
+tpb (0.6.2-2) unstable; urgency=low
+
+  * added README.Debian and "Suggests: xfonts-base-transcoded" because some
+    users with locales other than "C" or "POSIX" expierience font problems.
+    (Closes: #259736)
+  * use = instead of == in test in /etc/X11/Xsession.d/90tpb for strict POSIX
+    compliance. (Closes: #257766)
+  * changed standards version to 3.6.1.1
+
+ -- Markus Braun <mbr@debian.org>  Wed, 18 Aug 2004 12:40:00 +0100
+
+tpb (0.6.2-1) unstable; urgency=low
+
+  * new upstream version
+    - Uses the default xosd font as its own default (Closes: #242765, #248325)
+    - Reworked signal handling (Closes: #246015)
+  * Japanese translation of debconf templates, thanks to Hideki Yamane!
+     (Closes: #242253)
+
+ -- Markus Braun <mbr@debian.org>  Mon, 19 May 2004 16:24:52 +0100
+
+tpb (0.6.1-1) unstable; urgency=low
+
+  * new upstream version
+  * new commandline option to disable grabbing of X events. Also X events in
+    general are only grabbed for configured keys, thanks to Michael Stuermer.
+    (Closes: #205466)
+
+ -- Markus Braun <markus.braun@krawel.de>  Mon, 19 Jan 2004 10:46:52 +0100
+
+tpb (0.6.0-1) unstable; urgency=low
+
+  * new upstream version
+  * use gettext for the debconf templates (Closes: #202201)
+  * french translation for debconf templates, thanks to Michel Grentzinger
+    <mic.grentz@online.fr> (Closes: #202202)
+  * added debconf question about autostart of tpb
+  * tpb now detects devfs on its own. Now it works without compatibility
+    symlinks (Closes: #202438, #202440)
+
+ -- Markus Braun <markus.braun@krawel.de>  Thu, 10 Aug 2003 23:14:00 +0200
+
+tpb (0.5.1-1) unstable; urgency=low
+
+  * new upstream version
+
+ -- Markus Braun <markus.braun@krawel.de>  Thu, 10 Apr 2003 10:04:34 +0200
+
+tpb (0.5.0-1) unstable; urgency=low
+
+  * new upstream version
+
+ -- Markus Braun <markus.braun@krawel.de>  Sat, 05 Apr 2003 21:36:43 +0200
+
+tpb (0.4.2-1) unstable; urgency=low
+
+  * new upstream version
+
+ -- Markus Braun <markus.braun@krawel.de>  Tue, 12 Dec 2002 11:10:00 +0200
+
+tpb (0.4.1-1) unstable; urgency=low
+
+  * new upstream version
+  * support for devfs
+
+ -- Markus Braun <markus.braun@krawel.de>  Tue, 19 Nov 2002 14:30:00 +0200
+
+tpb (0.4.0-1) unstable; urgency=low
+
+  * new upstream version
+
+ -- Markus Braun <markus.braun@krawel.de>  Tue, 04 Nov 2002 13:00:00 +0200
+
+tpb (0.3.1-1) unstable; urgency=low
+
+  * new upstream version
+
+ -- Markus Braun <markus.braun@krawel.de>  Tue, 24 Sep 2002 13:00:00 +0200
+
+tpb (0.3.0-1) unstable; urgency=low
+
+  * new upstream version
+
+ -- Markus Braun <markus.braun@krawel.de>  Tue, 22 Jul 2002 15:30:32 +0200
+ 
+tpb (0.2.2-1) unstable; urgency=low
+
+  * new upstream version
+
+ -- Markus Braun <markus.braun@krawel.de>  Mon,  8 Jul 2002 23:42:07 +0200
+ 
+tpb (0.2.1-1) unstable; urgency=low
+
+  * Initial Release.
+
+ -- Markus Braun <markus.braun@krawel.de>  Thu,  4 Jul 2002 09:53:24 +0200
+

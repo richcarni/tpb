@@ -1,0 +1,629 @@
+# TPB german translation
+# Copyright (C) 2003 Free Software Foundation, Inc.
+# Markus Braun <markus.braun@krawel.de>, 2003, 2004.
+msgid ""
+msgstr ""
+"Project-Id-Version: tpb 0.6.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2005-07-25 10:29+0200\n"
+"PO-Revision-Date: 2003-01-10 14:10+0100\n"
+"Last-Translator: Markus Braun <markus.braun@krawel.de>\n"
+"Language-Team: German <de@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=iso-8859-1\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: src/tpb.c:115
+#, c-format
+msgid "Unable to register signal handler:"
+msgstr "Rückruffunktion für Signal kann nicht registriert werden:"
+
+#: src/tpb.c:213
+msgid "ThinkPad button pressed"
+msgstr "ThinkPad Taste gedrückt"
+
+#: src/tpb.c:231
+#, c-format
+msgid "Zoom is %s\n"
+msgstr "Zoom ist %s\n"
+
+#: src/tpb.c:231 src/tpb.c:435 src/tpb.c:506
+msgid "on"
+msgstr "an"
+
+#: src/tpb.c:231 src/tpb.c:435 src/tpb.c:506
+msgid "off"
+msgstr "aus"
+
+#: src/tpb.c:242
+msgid "Zoom on"
+msgstr "Zoom an"
+
+#: src/tpb.c:242
+msgid "Zoom off"
+msgstr "Zoom aus"
+
+#: src/tpb.c:252
+msgid "Home button pressed"
+msgstr "Home Taste gedrückt"
+
+#: src/tpb.c:271
+msgid "Search button pressed"
+msgstr "Suchen Taste gedrückt"
+
+#: src/tpb.c:290
+msgid "Mail button pressed"
+msgstr "Mail Taste gedrückt"
+
+#: src/tpb.c:309
+msgid "Wireless button pressed"
+msgstr "Wireless Taste gedrückt"
+
+#: src/tpb.c:327
+msgid "Favorites button pressed"
+msgstr "Favoriten Taste gedrückt"
+
+#: src/tpb.c:345
+msgid "Reload button pressed"
+msgstr "Neu Laden Taste gedrückt"
+
+#: src/tpb.c:363
+msgid "Abort button pressed"
+msgstr "Abbruch Taste gedrückt"
+
+#: src/tpb.c:381
+msgid "Backward button pressed"
+msgstr "Zurück Taste gedrückt"
+
+#: src/tpb.c:399
+msgid "Forward button pressed"
+msgstr "Vorwärts Taste gedrückt"
+
+#: src/tpb.c:417
+msgid "Fn button pressed"
+msgstr "Fn Taste gedrückt"
+
+#: src/tpb.c:435
+#, c-format
+msgid "ThinkLight is %s\n"
+msgstr "ThinkLight ist %s\n"
+
+#: src/tpb.c:446
+msgid "ThinkLight on"
+msgstr "ThinkLight an"
+
+#: src/tpb.c:446
+msgid "ThinkLight off"
+msgstr "ThinkLight aus"
+
+#: src/tpb.c:472
+msgid "LCD on, CRT off"
+msgstr "Intern an, Extern aus"
+
+#: src/tpb.c:477
+msgid "LCD off, CRT on"
+msgstr "Intern aus, Extern an"
+
+#: src/tpb.c:482
+msgid "LCD on, CRT on"
+msgstr "Intern an, Extern an"
+
+#: src/tpb.c:487
+#, c-format
+msgid "Display changed: %s\n"
+msgstr "Anzeige hat sich geändert: %s\n"
+
+#: src/tpb.c:497
+msgid "Display"
+msgstr "Anzeige"
+
+#: src/tpb.c:506
+#, c-format
+msgid "HV Expansion is %s\n"
+msgstr "HV Ausdehnung %s\n"
+
+#: src/tpb.c:517
+msgid "HV Expansion on"
+msgstr "HV Ausdehnung an"
+
+#: src/tpb.c:517
+msgid "HV Expansion off"
+msgstr "HV Ausdehnung aus"
+
+#: src/tpb.c:526
+#, c-format
+msgid "Brightness changed: Level %d\n"
+msgstr "Helligkeit hat sich geändert: Wert %d\n"
+
+#: src/tpb.c:539
+msgid "Brightness"
+msgstr "Helligkeit"
+
+#: src/tpb.c:562
+#, c-format
+msgid "Volume changed: Level %d\n"
+msgstr "Lautstärke hat sich geändert: Wert %d\n"
+
+#: src/tpb.c:577
+msgid "Volume"
+msgstr "Lautstärke"
+
+#: src/tpb.c:586 src/tpb.c:610
+msgid "Mute on"
+msgstr "Stummschaltung an"
+
+#: src/tpb.c:586 src/tpb.c:614
+msgid "Mute off"
+msgstr "Stummschaltung aus"
+
+#: src/tpb.c:624
+#, c-format
+msgid "Power line changed: %s\n"
+msgstr "Spannungsversorgung hat sich geändert: %s\n"
+
+#: src/tpb.c:624 src/tpb.c:635
+msgid "AC connected"
+msgstr "Spannungsversorgung angeschlossen"
+
+#: src/tpb.c:624 src/tpb.c:635
+msgid "AC disconnected"
+msgstr "Spannungsversorgung getrennt"
+
+#: src/tpb.c:645
+msgid "PM AC high"
+msgstr "PM AC hoch"
+
+#: src/tpb.c:650
+msgid "PM AC auto"
+msgstr "PM AC automatisch"
+
+#: src/tpb.c:655
+msgid "PM AC manual"
+msgstr "PM AC manuell"
+
+#: src/tpb.c:660
+msgid "PM AC unknown"
+msgstr "PM AC unbekannt"
+
+#: src/tpb.c:664
+#, c-format
+msgid "Power management mode AC changed: %s\n"
+msgstr "Power Management Modus AC hat sich geändert: %s\n"
+
+#: src/tpb.c:686
+msgid "PM battery high"
+msgstr "PM Batterie hoch"
+
+#: src/tpb.c:691
+msgid "PM battery auto"
+msgstr "PM Batterie automatisch"
+
+#: src/tpb.c:696
+msgid "PM battery manual"
+msgstr "PM Batterie manuell"
+
+#: src/tpb.c:701
+msgid "PM battery unknown"
+msgstr "PM Batterie unbekannt"
+
+#: src/tpb.c:705
+#, c-format
+msgid "Power management mode battery changed: %s\n"
+msgstr "Power Management Modus Batterie hat sich geändert: %s\n"
+
+#: src/tpb.c:750 src/tpb.c:767
+#, c-format
+msgid "Unable to fork daemon:"
+msgstr "Kindprozess kann nicht abgespalten werden"
+
+#: src/tpb.c:775
+msgid "Daemon started."
+msgstr "Daemon gestartet."
+
+#: src/tpb.c:815
+#, c-format
+msgid "Unable to initialize xosd. Running without onsceen display.\n"
+msgstr "xosd kann nicht initialisiert werden. Keine Bildschirmanzeige möglich.\n"
+
+#: src/tpb.c:822
+#, c-format
+msgid "Invalid xosd font \"%s\". Even the default font \"%s\" "
+msgstr "Ungültige xosd Schrift \"%s\". Selbst die Standardschrift \"%s\""
+
+#: src/tpb.c:824
+#, c-format
+msgid "is not available. Please add an existing font to your %s file.\n"
+msgstr "ist nicht verfügbar. Bitte definieren sie eine existierende Schrift in der Datei %s.\n"
+
+#: src/tpb.c:826
+#, c-format
+msgid "Running without onsceen display.\n"
+msgstr "Keine Bildschirmanzeige möglich.\n"
+
+#: src/tpb.c:842
+#, c-format
+msgid "Invalid xosd font \"%s\". Running with the default \"%s\".\n"
+msgstr "Ungültige xosd Schrift \"%s\". Verwende die Standardschrift \"%s\".\n"
+
+#: src/tpb.c:849
+#, c-format
+msgid "Invalid xosd color \"%s\". Running with the default \"%s\".\n"
+msgstr "Ungültige xosd Farbe \"%s\". Verwende die Standardfarbe \"%s\".\n"
+
+#: src/tpb.c:856
+#, c-format
+msgid "Invalid xosd timeout \"%d\". Running with the default \"%d\".\n"
+msgstr "Ungültige xosd Zeitüberschreitung \"%s\". Verwende die Standardzeitüberschreitung \"%s\".\n"
+
+#: src/tpb.c:863
+#, c-format
+msgid "Invalid xosd position \"%d\". Running with the default \"%d\".\n"
+msgstr "Ungültige xosd Position \"%s\". Verwende die Standardposition \"%s\".\n"
+
+#: src/tpb.c:871
+#, c-format
+msgid "Invalid horizontal xosd offset \"%d\". Running with the default \"%d\".\n"
+msgstr "Ungültige xosd horizontale Abstand \"%s\". Verwende die Standardabstand \"%s\".\n"
+
+#: src/tpb.c:878 src/tpb.c:885
+#, c-format
+msgid "Invalid vertical xosd offset \"%d\". Running with the default \"%d\".\n"
+msgstr "Ungültige xosd vertikale Abstand \"%s\". Verwende die Standardabstand \"%s\".\n"
+
+#: src/tpb.c:893
+#, c-format
+msgid "Invalid shadow xosd offset \"%d\". Running with the default \"%d\".\n"
+msgstr "Ungültige xosd Schattenabstand \"%s\". Verwende die Standardabstand \"%s\".\n"
+
+#: src/tpb.c:901
+#, c-format
+msgid "Invalid xosd shadow color \"%s\". Running with the default \"%s\".\n"
+msgstr "Ungültige xosd Schattenfarbe \"%s\". Verwende die Standardfarbe \"%s\".\n"
+
+#: src/tpb.c:908
+#, c-format
+msgid "Invalid outline xosd width \"%d\". Running with the default \"%d\".\n"
+msgstr "Ungültige xosd Randlinienbreite \"%s\". Verwende die Standardbreite \"%s\".\n"
+
+#: src/tpb.c:915
+#, c-format
+msgid "Invalid xosd outline color \"%s\". Running with the default \"%s\".\n"
+msgstr "Ungültige xosd Randfarbe \"%s\". Verwende die Standardfarbe \"%s\".\n"
+
+#: src/tpb.c:924
+#, c-format
+msgid "Invalid xosd alignment \"%d\". Running with default \"%d\".\n"
+msgstr "Ungültige xosd Ausrichtung \"%s\". Verwende die Standardausrichtung \"%s\".\n"
+
+#: src/tpb.c:948
+#, c-format
+msgid "Can't get display name, X may not be running!\n"
+msgstr "Kann den Anzeige Namen nicht erfragen, eventuell läuft kein X!\n"
+
+#: src/tpb.c:955
+#, c-format
+msgid "Can't open display, X may not be running!\n"
+msgstr "Kann die Anzeige nicht öffnen, eventuell läuft kein X!\n"
+
+#: src/tpb.c:1000 src/tpb.c:1290
+#, c-format
+msgid "Unable to open device %s: "
+msgstr "Kann das Gerät %s nicht öffnen: "
+
+#: src/tpb.c:1010
+#, c-format
+msgid "Unable to seek in device %s: "
+msgstr "Kann im Gerät %s nicht suchen: "
+
+#: src/tpb.c:1016 src/tpb.c:1305
+#, c-format
+msgid "Unable to read from device %s: "
+msgstr "Kann vom Gerät %s nicht lesen: "
+
+#: src/tpb.c:1264
+#, c-format
+msgid "Unable to fork application \"%s\".\n"
+msgstr "Programm \"%s\" kann nicht abgespalten werden.\n"
+
+#: src/tpb.c:1265
+#, c-format
+msgid "HINT:\n"
+msgstr "HINWEIS:\n"
+
+#: src/tpb.c:1266
+#, c-format
+msgid "With tpb version 0.6.2 or later you need to specify applications\n"
+msgstr "Bei tpb Version 0.6.2 oder später müssen Applikationen mit\n"
+
+#: src/tpb.c:1267
+#, c-format
+msgid "using the whole path to the executable program.\n"
+msgstr "vollem Pfad zum ausführbaren Programm spezifiziert werden.\n"
+
+#: src/tpb.c:1292
+#, c-format
+msgid "To use mixersteps other than %d you need write access to %s.\n"
+msgstr "Um eine andere Anzahl von mixersteps als %d nutzen zu können wird Schreibberechtigung für %s benötigt.\n"
+
+#: src/tpb.c:1298 src/tpb.c:1316
+#, c-format
+msgid "Unable to seek device %s: "
+msgstr "Kann im Gerät %s nicht suchen: "
+
+#: src/tpb.c:1323
+#, c-format
+msgid "Unable to write to device %s: "
+msgstr "Kann auf das Gerät %s nicht schreiben: "
+
+#: src/tpb.c:1344
+#, c-format
+msgid "Unable to open mixer device %s: "
+msgstr "Kann den Mixer %s nicht öffnen: "
+
+#: src/tpb.c:1351
+#, c-format
+msgid "Unable to read volume from mixer device %s: "
+msgstr "Kann die Lautstärke vom Mixer %s nicht lesen: "
+
+#: src/tpb.c:1379
+#, c-format
+msgid "Unable to write volume to mixer device %s: "
+msgstr "Kann die Lautstärke nicht in den Mixer %s schreiben: "
+
+#: src/tpb.c:1386
+#, c-format
+msgid "Unable to close mixer device %s: "
+msgstr "Kann den Mixer %s nicht schließen: "
+
+#: src/tpb.c:1454
+msgid "There is already a application grabbing some ThinkPad keys.\n"
+msgstr "Ein anderes Programm fragt bereits einige ThinkPad Tasten ab.\n"
+
+#: src/tpb.c:1455
+msgid "Possibly you restarted tpb too fast.\n"
+msgstr "Vielleicht haben Sie tpb zu schnell neu gestartet.\n"
+
+#: src/cfg.c:93 src/cfg.c:149
+msgid "Argument in configuration too long!\n"
+msgstr "Argument in der Konfiguration ist zu lang!\n"
+
+#: src/cfg.c:137
+msgid "Keyword in configuration too long!\n"
+msgstr "Schlüsselwort in der Konfiguration ist zu lang!\n"
+
+#: src/cfg.c:232
+#, c-format
+msgid "Unable to open config file %s: "
+msgstr "Kann die Konfigurationsdatei %s nicht öffnen: "
+
+#: src/cfg.c:408 src/cfg.c:445 src/cfg.c:454 src/cfg.c:1054 src/cfg.c:1072 src/cfg.c:1082 src/cfg.c:1092 src/cfg.c:1102 src/cfg.c:1112 src/cfg.c:1122 src/cfg.c:1132 src/cfg.c:1142 src/cfg.c:1152
+#: src/cfg.c:1162 src/cfg.c:1172 src/cfg.c:1182 src/cfg.c:1220 src/cfg.c:1231 src/cfg.c:1241 src/cfg.c:1276 src/cfg.c:1294 src/cfg.c:1547 src/cfg.c:1553
+msgid "Not enough memory"
+msgstr "Nicht genug Speicher"
+
+#: src/cfg.c:998
+#, c-format
+msgid "Illegal apm state: %s\n"
+msgstr "Unzulässiger Zustand für apm: %s\n"
+
+#: src/cfg.c:1022
+#, c-format
+msgid "Illegal powermgt state: %s\n"
+msgstr "Unzulässiger Zustand für Leistungsverwaltung: %s\n"
+
+#: src/cfg.c:1043
+#, c-format
+msgid "Illegal xevents state: %s\n"
+msgstr "Unzulässiger Zustand für xevents: %s\n"
+
+#: src/cfg.c:1062
+#, c-format
+msgid "Illegal polltime: %s\n"
+msgstr "Unzulässiger Wert für Abfragezyklus: %s\n"
+
+#: src/cfg.c:1201
+#, c-format
+msgid "Illegal mixer state: %s\n"
+msgstr "Unzulässiger Zustand für Mixer: %s\n"
+
+#: src/cfg.c:1210
+#, c-format
+msgid "Illegal mixersteps: %s\n"
+msgstr "Unzulässiger Anzahl für Mixer Schritte: %s\n"
+
+#: src/cfg.c:1249
+#, c-format
+msgid "Illegal xosd timeout: %s\n"
+msgstr "Unzulässige Zeitüberschreitung für xosd: %s\n"
+
+#: src/cfg.c:1257
+#, c-format
+msgid "Illegal xosd offset: %s\n"
+msgstr "Unzulässiger Abstand für xosd: %s\n"
+
+#: src/cfg.c:1265
+#, c-format
+msgid "Illegal xosd shadow offset: %s\n"
+msgstr "Unzulässiger Schattenabstand für xosd: %s\n"
+
+#: src/cfg.c:1284
+#, c-format
+msgid "Illegal xosd outline width: %s\n"
+msgstr "Unzulässige Randbreite für xosd: %s\n"
+
+#: src/cfg.c:1303
+#, c-format
+msgid "Illegal xosd vertical offset: %s\n"
+msgstr "Unzulässiger vertikaler Abstand für xosd: %s\n"
+
+#: src/cfg.c:1312
+#, c-format
+msgid "Illegal xosd horizontal offset: %s\n"
+msgstr "Unzulässiger horizontaler Abstand für xosd: %s\n"
+
+#: src/cfg.c:1316
+msgid "Sorry, OSDHORIZONTAL is only supported by xosd 2.0.0 and above.\n"
+msgstr "Leider ist OSDHORIZONTAL erst bei xosd 2.0.0 und höher unterstützt.\n"
+
+#: src/cfg.c:1334
+msgid "Sorry, OSDPOS MIDDLE is only supported by xosd 2.0.0 and above.\n"
+msgstr "Leider ist OSDPOS MIDDLE erst bei xosd 2.0.0 und höher unterstützt.\n"
+
+#: src/cfg.c:1342
+#, c-format
+msgid "Illegal xosd position: %s\n"
+msgstr "Unzulässige horizontale Position für xosd: %s\n"
+
+#: src/cfg.c:1368
+#, c-format
+msgid "Illegal xosd alignment: %s\n"
+msgstr "Unzulässige Ausrichtung für xosd: %s\n"
+
+#: src/cfg.c:1390
+#, c-format
+msgid "Illegal xosd state: %s\n"
+msgstr "Unzulässiger Zustand für xosd: %s\n"
+
+#: src/cfg.c:1410
+#, c-format
+msgid "Illegal xosd zoom state: %s\n"
+msgstr "Unzulässiger Zustand für xosd Vergößerung: %s\n"
+
+#: src/cfg.c:1430
+#, c-format
+msgid "Illegal xosd thinklight state: %s\n"
+msgstr "Unzulässiger Zustand für xosd thinklight: %s\n"
+
+#: src/cfg.c:1450
+#, c-format
+msgid "Illegal xosd display state: %s\n"
+msgstr "Unzulässiger Zustand für xosd Anzeige: %s\n"
+
+#: src/cfg.c:1470
+#, c-format
+msgid "Illegal xosd HV expansion state: %s\n"
+msgstr "Unzulässiger Zustand für xosd HV Ausdehnung: %s\n"
+
+#: src/cfg.c:1490
+#, c-format
+msgid "Illegal xosd brightness state: %s\n"
+msgstr "Unzulässiger Zustand für xosd Helligkeit: %s\n"
+
+#: src/cfg.c:1510
+#, c-format
+msgid "Illegal xosd volume state: %s\n"
+msgstr "Unzulässiger Zustand für xosd Lautstärke: %s\n"
+
+#: src/cfg.c:1530
+#, c-format
+msgid "Illegal xosd powermanagement state: %s\n"
+msgstr "Unzulässiger Zustand für Leistungsverwaltung: %s\n"
+
+#: src/cfg.c:1570
+#, c-format
+msgid ""
+"Usage: %s options\n"
+"\n"
+msgstr ""
+"Verwendung: %s Optionen\n"
+"\n"
+
+#: src/cfg.c:1571
+#, c-format
+msgid "options:\n"
+msgstr "Optionen:\n"
+
+#: src/cfg.c:1572
+#, c-format
+msgid "   -h, --help           display this help\n"
+msgstr "   -h, --help             Diese Hilfe anzeigen\n"
+
+#: src/cfg.c:1573
+#, c-format
+msgid "   -d, --daemon         start in daemon mode\n"
+msgstr "   -d, --daemon           Startet im Dämon Modus\n"
+
+#: src/cfg.c:1574
+#, c-format
+msgid "   -c, --config=FILE    read FILE as additional configuration file\n"
+msgstr "   -c, --config=DATEI     Liest DATEI als zusätzliche Konfigurationsdatei\n"
+
+#: src/cfg.c:1575
+#, c-format
+msgid "   -m, --mixer=STATE    use OSS software mixer [%s]\n"
+msgstr "   -m, --mixer=ZUSTAND    Benutzt den OSS Software Mixer [off]\n"
+
+#: src/cfg.c:1577
+#, c-format
+msgid "   -o, --osd=STATE      show informations as on-screen display [%s]\n"
+msgstr "   -o, --osd=ZUSTAND      Zeigt Informationen auf dem Bildschirm [on]\n"
+
+#: src/cfg.c:1579
+#, c-format
+msgid "   -p, --poll=DELAY     set delay between polls in microseconds [%d]\n"
+msgstr "   -p, --poll=ZYKLUS      Verzögerung zwischen Abfragen im Mikrosekunden [%d]\n"
+
+#: src/cfg.c:1580
+#, c-format
+msgid "   -t, --thinkpad=CMD   string with command and options that should be executed\n"
+msgstr "   -t, --thinkpad=KMD     Zeichenkette mit einem Kommando und Optionen, das ausgeführt werden soll,\n"
+
+#: src/cfg.c:1581
+#, c-format
+msgid "                        when ThinkPad button is pressed [none]\n"
+msgstr "                          wenn die ThinkPad Taste gedrückt wird [keines]\n"
+
+#: src/cfg.c:1582
+#, c-format
+msgid "   -H, --home=CMD       command and options for Home button [none]\n"
+msgstr "   -H, --home=KMD         Kommando und Optionen für die Home Taste [keines]\n"
+
+#: src/cfg.c:1583
+#, c-format
+msgid "   -S, --search=CMD     command and options for Search button [none]\n"
+msgstr "   -S, --search=KMD       Kommando und Optionen für die Suchen Taste [keines]\n"
+
+#: src/cfg.c:1584
+#, c-format
+msgid "   -M, --mail=CMD       command and options for Mail button [none]\n"
+msgstr "   -M, --mail=KMD         Kommando und Optionen für die Mail Taste [keines]\n"
+
+#: src/cfg.c:1585
+#, c-format
+msgid "   -W, --wireless=CMD   command and options for Wireless button [none]\n"
+msgstr "   -W, --wireless=KMD     Kommando und Optionen für die Wireless Taste [keines]\n"
+
+#: src/cfg.c:1586
+#, c-format
+msgid "   -C, --callback=CMD   string with command that should be executed for each\n"
+msgstr "   -C, --callback=KMD     Zeichenkette mit einem Kommando und Optionen, das für jede\n"
+
+#: src/cfg.c:1587
+#, c-format
+msgid "                        pressed button. It is called with pressed button as\n"
+msgstr "                          gedrückte Taste ausgeführt werden soll. Es wird mit der gedrückten Taste\n"
+
+#: src/cfg.c:1588
+#, c-format
+msgid "                        first argument and new state as second [none]\n"
+msgstr "                          als erstes Argument und dem neuen Zustand als zweites Argument aufgerufen [none]\n"
+
+#: src/cfg.c:1589
+#, c-format
+msgid "   -A, --apm=STATE      poll /proc/apm for apm information [%s]\n"
+msgstr "   -A, --apm=ZUSTAND      /proc/apm für apm Informationen abfragen [off]\n"
+
+#: src/cfg.c:1590
+#, c-format
+msgid "   -P, --powermgt=STATE display of power management messages [%s]\n"
+msgstr "   -P, --powermgt=ZUSTAND Zeigt Power Management Meldungen an [auto]\n"
+
+#: src/cfg.c:1591
+#, c-format
+msgid "   -x, --xevents=STATE  grab X11 events of special keys [%s]\n"
+msgstr "   -x, --xevents=STATE  Abfangen von X11 Ereignissen von Spezialtasten [on]\n"
+
+#: src/cfg.c:1592
+#, c-format
+msgid "   -v, --verbose        print information about pressed keys\n"
+msgstr "   -v, --verbose          Zeigt Informationen über gedrückte Tasten\n"

@@ -1,0 +1,74 @@
+Meaning of bits in NVRAM of Thinkpad
+
+byte 0x32: xxxx xxxx
+             |
+             +--------> toggle with delay if AC is connected/disconnected (battery charge?)
+
+byte 0x34: xxxx xxxx
+                 |||
+                 ||+--> suspend or hibernate timer
+                 |+---> sedate battery low (0=suspend, 1=hibernate)
+                 +----> power switch mode (0=power, 1=hibernate)
+
+byte 0x37: xxxx xxxx
+                 | |
+                 | +--> Suspend on lid closure (0=disable, 1=enable)
+                 +----> RediSafe suspend (0=disable, 1=enable)
+
+byte 0x39: xxxx xxxx
+             || ||||
+             || |||+--> power management mode ac manual \
+             || ||+---> power management mode ac auto    > cycle if Fn+F11 pressed (100, 010, 001)
+             || |+----> power management mode ac high   /  when ac power connected
+             || +-----> power management mode battery manual \
+             |+-------> power management mode battery auto    > cycle if Fn+F11 pressed (100, 010, 001)
+             +--------> power management mode battery high   /  when ac power is disconnected
+
+byte 0x3b: xxxx xxxx
+            |
+            +---------> Fn hotkey sticky/lock (0=disable, 1=sticky/lock)
+
+byte 0x3f: xxxx xxxx
+                   |
+                   +--> resume RTC appointment (0=disable, 1=enable)
+
+byte 0x3f-0x44 RTC appointment (date/time/...)
+
+byte 0x56: xxxx xxxx
+             |   |||
+             |   ||+--> toggle if home button pressed
+             |   |+---> toggle if search button pressed
+             |   +----> toggle if mail button pressed
+             +--------> toggle if wireless button pressed
+byte 0x57: xxxx xxxx
+           |||| ||||
+           |||| |||+--> toggle if battery is inserted and charge changes
+           |||| ||+---> toggle if Fn+F2 pressed (???)
+           |||| |+----> toggle if power management mode was changed
+           |||| +-----> toggle if thinkpad button pressed (reseted when returning from hibernate)
+           |||+-------> toggle if AC is connected/disconnected
+           ||+--------> toggle if Fn+spacebar (screen zoom??) pressed
+           |+---------> toggle if video output is switched with Fn+F7 (LCD/CRT) (doesn't toggle for linux 2.6)
+           +----------> toggle if Fn+F12 (hibernate) is pressed
+
+byte 0x58: xxxx xxxx
+              |    |
+              |    +--> toggle when returns from hibernate or suspend
+              +-------> ThinkLight light (0=off, 1=on)
+
+byte 0x59: xxxx xxxx
+             ||   ||
+             ||   ++--> display state (1=LCD,2=CRT,3=both)
+             ++-------> toggle if Fn+F8 (screen expand) pressed
+
+byte 0x5E: xxxx xxxx
+             |   |||
+             |   +++--> brightness level (0x0-0x7)
+             +--------> toggle if LCD brightness is changed with Fn+Home and Fn+End
+
+byte 0x60: xxxx xxxx
+           ||   ||||
+           ||   ++++--> Volume level (0x0-0xE)
+           ||
+           |+---------> mute (0=off, 1=on)
+           +----------> toggle if button (volume up, volume down, mute) pressed

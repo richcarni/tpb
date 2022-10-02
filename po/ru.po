@@ -1,0 +1,593 @@
+# Russian Translation of ThinkPad Buttons.
+# Grigory Batalov <bga@altlinux.ru>, 2003-2004.
+msgid ""
+msgstr ""
+"Project-Id-Version: tpb 0.6.2\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2004-05-18 13:22+0200\n"
+"PO-Revision-Date: 2004-05-16 15:28+0400\n"
+"Last-Translator: Grigory Batalov <bga@altlinux.ru>\n"
+"Language-Team: none\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=KOI8-R\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: src/tpb.c:115
+#, c-format
+msgid "Unable to register signal handler:"
+msgstr "Невозможно перехватить сигнал:"
+
+#: src/tpb.c:207
+msgid "ThinkPad button pressed"
+msgstr "Нажата клавиша ThinkPad"
+
+#: src/tpb.c:225
+#, c-format
+msgid "Zoom is %s\n"
+msgstr "Увеличение %s\n"
+
+#: src/tpb.c:225 src/tpb.c:428 src/tpb.c:497
+msgid "on"
+msgstr "включено"
+
+#: src/tpb.c:225 src/tpb.c:428 src/tpb.c:497
+msgid "off"
+msgstr "выключено"
+
+#: src/tpb.c:235
+msgid "Zoom on"
+msgstr "Увеличено"
+
+#: src/tpb.c:235
+msgid "Zoom off"
+msgstr "Уменьшено"
+
+#: src/tpb.c:245
+msgid "Home button pressed"
+msgstr "Нажата клавиша Домой"
+
+#: src/tpb.c:264
+msgid "Search button pressed"
+msgstr "Нажата клавиша Поиск"
+
+#: src/tpb.c:283
+msgid "Mail button pressed"
+msgstr "Нажата клавиша Почта"
+
+#: src/tpb.c:302
+msgid "Wireless button pressed"
+msgstr "Нажата клавиша Антенна"
+
+#: src/tpb.c:320
+msgid "Favorites button pressed"
+msgstr "Нажата клавиша Закладки"
+
+#: src/tpb.c:338
+msgid "Reload button pressed"
+msgstr "Нажата клавиша Обновить"
+
+#: src/tpb.c:356
+msgid "Abort button pressed"
+msgstr "Нажата клавиша Стоп"
+
+#: src/tpb.c:374
+msgid "Backward button pressed"
+msgstr "Нажата клавиша Назад"
+
+#: src/tpb.c:392
+msgid "Forward button pressed"
+msgstr "Нажата клавиша Вперёд"
+
+#: src/tpb.c:410
+msgid "Fn button pressed"
+msgstr "Нажата клавиша Fn"
+
+#: src/tpb.c:428
+#, c-format
+msgid "ThinkLight is %s\n"
+msgstr "Освещение %s\n"
+
+#: src/tpb.c:438
+msgid "ThinkLight on"
+msgstr "Подсветка включена"
+
+#: src/tpb.c:438
+msgid "ThinkLight off"
+msgstr "Подсветка выключена"
+
+#: src/tpb.c:464
+msgid "LCD on, CRT off"
+msgstr "LCD вкл., CRT выкл."
+
+#: src/tpb.c:469
+msgid "LCD off, CRT on"
+msgstr "LCD выкл., CRT вкл."
+
+#: src/tpb.c:474
+msgid "LCD on, CRT on"
+msgstr "LCD вкл., CRT вкл."
+
+#: src/tpb.c:479
+#, c-format
+msgid "Display changed: %s\n"
+msgstr "Смена экрана: %s\n"
+
+#: src/tpb.c:488
+msgid "Display"
+msgstr "Экран"
+
+#: src/tpb.c:497
+#, c-format
+msgid "HV Expansion is %s\n"
+msgstr "Сохранение пропорций %s\n"
+
+#: src/tpb.c:507
+msgid "HV Expansion on"
+msgstr "Сохранение пропорций включено"
+
+#: src/tpb.c:507
+msgid "HV Expansion off"
+msgstr "Сохранение пропорций выключено"
+
+#: src/tpb.c:516
+#, c-format
+msgid "Brightness changed: Level %d\n"
+msgstr "Яркость изменилась: уровень %d\n"
+
+#: src/tpb.c:528
+msgid "Brightness"
+msgstr "Яркость"
+
+#: src/tpb.c:551
+#, c-format
+msgid "Volume changed: Level %d\n"
+msgstr "Громкость изменилась: уровень %d\n"
+
+#: src/tpb.c:565
+msgid "Volume"
+msgstr "Громкость"
+
+#: src/tpb.c:574 src/tpb.c:597
+msgid "Mute on"
+msgstr "Звук выключен"
+
+#: src/tpb.c:574 src/tpb.c:601
+msgid "Mute off"
+msgstr "Звук включен"
+
+#: src/tpb.c:611
+#, c-format
+msgid "Power line changed: %s\n"
+msgstr "Изменилось питание: %s\n"
+
+#: src/tpb.c:611 src/tpb.c:621
+msgid "AC connected"
+msgstr "Блок питания подключен"
+
+#: src/tpb.c:611 src/tpb.c:621
+msgid "AC disconnected"
+msgstr "Блок питания отключен"
+
+#: src/tpb.c:631
+msgid "PM AC high"
+msgstr "Режим AC высокий"
+
+#: src/tpb.c:636
+msgid "PM AC auto"
+msgstr "Режим AC авто"
+
+#: src/tpb.c:641
+msgid "PM AC manual"
+msgstr "Режим AC ручной"
+
+#: src/tpb.c:646
+msgid "PM AC unknown"
+msgstr "Неизвестный режим AC"
+
+#: src/tpb.c:650
+#, c-format
+msgid "Power management mode AC changed: %s\n"
+msgstr "Режим сохранения энергии AC изменился: %s\n"
+
+#: src/tpb.c:671
+msgid "PM battery high"
+msgstr "Режим батарей высокий"
+
+#: src/tpb.c:676
+msgid "PM battery auto"
+msgstr "Режим батарей авто"
+
+#: src/tpb.c:681
+msgid "PM battery manual"
+msgstr "Режим батарей ручной"
+
+#: src/tpb.c:686
+msgid "PM battery unknown"
+msgstr "Неизвестный режим батарей"
+
+#: src/tpb.c:690
+#, c-format
+msgid "Power management mode battery changed: %s\n"
+msgstr "Режим сохранения энергии батарей изменился: %s\n"
+
+#: src/tpb.c:737 src/tpb.c:754
+#, c-format
+msgid "Unable to fork daemon:"
+msgstr "Не могу запустить демона:"
+
+#: src/tpb.c:762
+msgid "Daemon started."
+msgstr "Демон запущен."
+
+#: src/tpb.c:802
+#, c-format
+msgid "Unable to initialize xosd. Running without onsceen display.\n"
+msgstr "Невозможно инициализировать xosd. Запуск без OSD.\n"
+
+#: src/tpb.c:809
+#, c-format
+msgid "Invalid xosd font \"%s\". Even the default font \"%s\" "
+msgstr "Неверный шрифт xosd \"%s\" и шрифт по умолчанию \"%s\" "
+
+#: src/tpb.c:811
+#, c-format
+msgid "is not available. Please add an existing font to your %s file.\n"
+msgstr "также не доступен. Пожалуйста, добавьте подходящий шрифт в файл настроек %s.\n"
+
+#: src/tpb.c:813
+#, c-format
+msgid "Running without onsceen display.\n"
+msgstr "Запуск без OSD.\n"
+
+#: src/tpb.c:829
+#, c-format
+msgid "Invalid xosd font \"%s\". Running with the default \"%s\".\n"
+msgstr "Неверный шрифт \"%s\". Использован шрифт по умолчанию \"%s\".\n"
+
+#: src/tpb.c:836
+#, c-format
+msgid "Invalid xosd color \"%s\". Running with the default \"%s\".\n"
+msgstr "Неверный цвет \"%s\". Использован цвет по умолчанию \"%s\".\n"
+
+#: src/tpb.c:843
+#, c-format
+msgid "Invalid xosd timeout \"%d\". Running with the default \"%d\".\n"
+msgstr "Неверный тайм-аут \"%d\". Используется тайм-аут по умолчанию \"%d\".\n"
+
+#: src/tpb.c:850
+#, c-format
+msgid "Invalid xosd position \"%d\". Running with the default \"%d\".\n"
+msgstr "Неверное расположение \"%d\". Используется по умолчанию \"%d\".\n"
+
+#: src/tpb.c:858
+#, c-format
+msgid "Invalid horizontal xosd offset \"%d\". Running with the default \"%d\".\n"
+msgstr "Неверное горизонтальное смещение \"%d\". Используется по умолчанию \"%d\".\n"
+
+#: src/tpb.c:865 src/tpb.c:872
+#, c-format
+msgid "Invalid vertical xosd offset \"%d\". Running with the default \"%d\".\n"
+msgstr "Неверное вертикальное смещение \"%d\". Используется по умолчанию \"%d\".\n"
+
+#: src/tpb.c:880
+#, c-format
+msgid "Invalid shadow xosd offset \"%d\". Running with the default \"%d\".\n"
+msgstr "Неверное смещение тени \"%d\". Используется по умолчанию \"%d\".\n"
+
+#: src/tpb.c:888
+#, c-format
+msgid "Invalid xosd shadow color \"%s\". Running with the default \"%s\".\n"
+msgstr "Неверный цвет тени \"%s\". Использован цвет по умолчанию \"%s\".\n"
+
+#: src/tpb.c:895
+#, c-format
+msgid "Invalid outline xosd width \"%d\". Running with the default \"%d\".\n"
+msgstr "Неверная ширина контура \"%d\". Используется ширина по умолчанию \"%d\".\n"
+
+#: src/tpb.c:902
+#, c-format
+msgid "Invalid xosd outline color \"%s\". Running with the default \"%s\".\n"
+msgstr "Неверный цвет контура \"%s\". Использован цвет по умолчанию \"%s\".\n"
+
+#: src/tpb.c:911
+#, c-format
+msgid "Invalid xosd alignment \"%d\". Running with default \"%d\".\n"
+msgstr "Неверное выравнивание \"%d\". Используется по умолчанию \"%d\".\n"
+
+#: src/tpb.c:935
+#, c-format
+msgid "Can't get display name, X may not be running!\n"
+msgstr "Не найдено имя экрана, вероятно, X-Windows не запущены!\n"
+
+#: src/tpb.c:942
+#, c-format
+msgid "Can't open display, X may not be running!\n"
+msgstr "Невозможно открыть экран, вероятно, X-Windows не запущены!\n"
+
+#: src/tpb.c:976 src/tpb.c:1251
+#, c-format
+msgid "Unable to open device %s: "
+msgstr "Ошибка открытия устройства %s: "
+
+#: src/tpb.c:983 src/tpb.c:1266
+#, c-format
+msgid "Unable to read from device %s: "
+msgstr "Ошибка чтения из устройства %s: "
+
+#: src/tpb.c:990
+#, c-format
+msgid "Unable to close device %s: "
+msgstr "Ошибка закрытия устройства %s: "
+
+#: src/tpb.c:1225
+#, c-format
+msgid "Unable to fork application \"%s\".\n"
+msgstr "Не могу запустить программу \"%s\".\n"
+
+#: src/tpb.c:1226
+#, c-format
+msgid "HINT:\n"
+msgstr "СОВЕТ:\n"
+
+#: src/tpb.c:1227
+#, c-format
+msgid "With tpb version 0.6.2 or later you need to specify applications\n"
+msgstr "Начиная с tpb 0.6.2, вы должны указывать программы\n"
+
+#: src/tpb.c:1228
+#, fuzzy, c-format
+msgid "using the whole path to the executable program.\n"
+msgstr "при помощи полного пути.\n"
+
+#: src/tpb.c:1253
+#, c-format
+msgid "To use mixersteps other than %d you need write access to %s.\n"
+msgstr "Для изменения шага громкости %d вам нужен доступ на запись к %s.\n"
+
+#: src/tpb.c:1259 src/tpb.c:1277
+#, c-format
+msgid "Unable to seek device %s: "
+msgstr "Ошибка смещения в устройстве %s: "
+
+#: src/tpb.c:1284
+#, c-format
+msgid "Unable to write to device %s: "
+msgstr "Ошибка записи в устройство %s: "
+
+#: src/tpb.c:1305
+#, c-format
+msgid "Unable to open mixer device %s: "
+msgstr "Ошибка открытия микшера %s: "
+
+#: src/tpb.c:1312
+#, c-format
+msgid "Unable to read volume from mixer device %s: "
+msgstr "Ошибка чтения громкости из микшера %s: "
+
+#: src/tpb.c:1340
+#, c-format
+msgid "Unable to write volume to mixer device %s: "
+msgstr "Ошибка записи громкости в микшер %s: "
+
+#: src/tpb.c:1347
+#, c-format
+msgid "Unable to close mixer device %s: "
+msgstr "Ошибка закрытия микшера %s: "
+
+#: src/tpb.c:1415
+msgid "There is already a application grabbing some ThinkPad keys.\n"
+msgstr "Уже запущено приложение, перехватывающее клавиши ThinkPad.\n"
+
+#: src/tpb.c:1416
+msgid "Possibly you restarted tpb too fast.\n"
+msgstr "Возможно, вы запускаете tpb слишком часто.\n"
+
+#: src/cfg.c:93 src/cfg.c:149
+msgid "Argument in configuration too long!\n"
+msgstr "Аргумент в настройках слишком длинный!\n"
+
+#: src/cfg.c:137
+msgid "Keyword in configuration too long!\n"
+msgstr "Ключевое слово в настройках слишком длинное!\n"
+
+#: src/cfg.c:232
+#, c-format
+msgid "Unable to open config file %s: "
+msgstr "Ошибка открытия файла конфигурации %s: "
+
+#: src/cfg.c:408 src/cfg.c:424 src/cfg.c:433 src/cfg.c:977 src/cfg.c:995 src/cfg.c:1005 src/cfg.c:1015 src/cfg.c:1025 src/cfg.c:1035 src/cfg.c:1045 src/cfg.c:1055 src/cfg.c:1065 src/cfg.c:1075
+#: src/cfg.c:1085 src/cfg.c:1095 src/cfg.c:1105 src/cfg.c:1143 src/cfg.c:1154 src/cfg.c:1164 src/cfg.c:1199 src/cfg.c:1217 src/cfg.c:1330 src/cfg.c:1336
+msgid "Not enough memory"
+msgstr "Недостаточно памяти"
+
+#: src/cfg.c:921
+#, c-format
+msgid "Illegal apm state: %s\n"
+msgstr "Неверный параметр APM: %s\n"
+
+#: src/cfg.c:945
+#, c-format
+msgid "Illegal powermgt state: %s\n"
+msgstr "Неверный параметр POWERMGT: %s\n"
+
+#: src/cfg.c:966
+#, c-format
+msgid "Illegal xevents state: %s\n"
+msgstr "Неверный параметр XEVENTS: %s\n"
+
+#: src/cfg.c:985
+#, c-format
+msgid "Illegal polltime: %s\n"
+msgstr "Неверный период опроса: %s\n"
+
+#: src/cfg.c:1124
+#, c-format
+msgid "Illegal mixer state: %s\n"
+msgstr "Неверный параметр микшера: %s\n"
+
+#: src/cfg.c:1133
+#, c-format
+msgid "Illegal mixersteps: %s\n"
+msgstr "Неверный шаг громкости: %s\n"
+
+#: src/cfg.c:1172
+#, c-format
+msgid "Illegal xosd timeout: %s\n"
+msgstr "Неверная задержка OSD: %s\n"
+
+#: src/cfg.c:1180
+#, c-format
+msgid "Illegal xosd offset: %s\n"
+msgstr "Неверное смещение OSD: %s\n"
+
+#: src/cfg.c:1188
+#, c-format
+msgid "Illegal xosd shadow offset: %s\n"
+msgstr "Неверное смещение тени: %s\n"
+
+#: src/cfg.c:1207
+#, c-format
+msgid "Illegal xosd outline width: %s\n"
+msgstr "Неверная ширина контура OSD: %s\n"
+
+#: src/cfg.c:1226
+#, c-format
+msgid "Illegal xosd vertical offset: %s\n"
+msgstr "Неверное вертикальное смещение OSD: %s\n"
+
+#: src/cfg.c:1235
+#, c-format
+msgid "Illegal xosd horizontal offset: %s\n"
+msgstr "Неверное горизонтальное смещение OSD: %s\n"
+
+#: src/cfg.c:1239
+msgid "Sorry, OSDHORIZONTAL is only supported by xosd 2.0.0 and above.\n"
+msgstr "Извините, OSDHORIZONTAL поддерживается только в xosd 2.0.0 и выше.\n"
+
+#: src/cfg.c:1257
+msgid "Sorry, OSDPOS MIDDLE is only supported by xosd 2.0.0 and above.\n"
+msgstr "Извините, OSDPOS MIDDLE поддерживается только в xosd 2.0.0 и выше.\n"
+
+#: src/cfg.c:1265
+#, c-format
+msgid "Illegal xosd position: %s\n"
+msgstr "Неверное положение OSD: %s\n"
+
+#: src/cfg.c:1291
+#, c-format
+msgid "Illegal xosd alignment: %s\n"
+msgstr "Неверное выравнивание OSD: %s\n"
+
+#: src/cfg.c:1313
+#, c-format
+msgid "Illegal xosd state: %s\n"
+msgstr "Неверный параметр OSD: %s\n"
+
+#: src/cfg.c:1353
+#, c-format
+msgid ""
+"Usage: %s options\n"
+"\n"
+msgstr ""
+"Использование: %s опции\n"
+"\n"
+
+#: src/cfg.c:1354
+#, c-format
+msgid "options:\n"
+msgstr "опции:\n"
+
+#: src/cfg.c:1355
+#, c-format
+msgid "   -h, --help           display this help\n"
+msgstr "   -h, --help           вызвать эту справку\n"
+
+#: src/cfg.c:1356
+#, c-format
+msgid "   -d, --daemon         start in daemon mode\n"
+msgstr "   -d, --daemon         запустить в виде демона\n"
+
+#: src/cfg.c:1357
+#, c-format
+msgid "   -c, --config=FILE    read FILE as additional configuration file\n"
+msgstr "   -c, --config=FILE    читать дополнительные настройки из файла FILE\n"
+
+#: src/cfg.c:1358
+#, c-format
+msgid "   -m, --mixer=STATE    use OSS software mixer [off]\n"
+msgstr "   -m, --mixer=STATE    использовать программный микшер OSS [off]\n"
+
+#: src/cfg.c:1360
+#, c-format
+msgid "   -o, --osd=STATE      show informations as on-screen display [on]\n"
+msgstr "   -o, --osd=STATE      показывать информацию на OSD [on]\n"
+
+#: src/cfg.c:1362
+#, c-format
+msgid "   -p, --poll=DELAY     set delay between polls in microseconds [%d]\n"
+msgstr "   -p, --poll=DELAY     установить интервал опроса в микросекундах [%d]\n"
+
+#: src/cfg.c:1363
+#, c-format
+msgid "   -t, --thinkpad=CMD   string with command and options that should be executed\n"
+msgstr "   -t, --thinkpad=CMD   строка с командой и её параметрами, которую выполнять\n"
+
+#: src/cfg.c:1364
+#, c-format
+msgid "                        when ThinkPad button is pressed [none]\n"
+msgstr "                        при нажатии клавиши ThinkPad [none]\n"
+
+#: src/cfg.c:1365
+#, c-format
+msgid "   -H, --home=CMD       command and options for Home button [none]\n"
+msgstr "   -H, --home=CMD       команда и параметры для клавиши Домой [none]\n"
+
+#: src/cfg.c:1366
+#, c-format
+msgid "   -S, --search=CMD     command and options for Search button [none]\n"
+msgstr "   -S, --search=CMD     команда и параметры для клавиши Поиск [none]\n"
+
+#: src/cfg.c:1367
+#, c-format
+msgid "   -M, --mail=CMD       command and options for Mail button [none]\n"
+msgstr "   -M, --mail=CMD       команда и параметры для клавиши Почта [none]\n"
+
+#: src/cfg.c:1368
+#, c-format
+msgid "   -W, --wireless=CMD   command and options for Wireless button [none]\n"
+msgstr "   -W, --wireless=CMD   команда и параметры для клавиши Антенна [none]\n"
+
+#: src/cfg.c:1369
+#, c-format
+msgid "   -C, --callback=CMD   string with command that should be executed for each\n"
+msgstr "   -C, --callback=CMD   строка с командой и параметрами, которую выполнять при\n"
+
+#: src/cfg.c:1370
+#, c-format
+msgid "                        pressed button. It is called with pressed button as\n"
+msgstr "                        нажатии любой клавиши. Вызывается с названием клавиши\n"
+
+#: src/cfg.c:1371
+#, c-format
+msgid "                        first argument and new state as second [none]\n"
+msgstr "                        и новым состоянием в качестве аргументов [none]\n"
+
+#: src/cfg.c:1372
+#, c-format
+msgid "   -A, --apm=STATE      poll /proc/apm for apm information [off]\n"
+msgstr "   -A, --apm=STATE      опрашивать /proc/apm для информации APM [off]\n"
+
+#: src/cfg.c:1373
+#, c-format
+msgid "   -P, --powermgt=STATE display of power management messages [auto]\n"
+msgstr "   -P, --powermgt=STATE показывать сообщения управления питанием [auto]\n"
+
+#: src/cfg.c:1374
+#, c-format
+msgid "   -x, --xevents=STATE  grab X11 events of special keys [on]\n"
+msgstr "   -x, --xevents=STATE  перехватывать события X11 от специальных клавиш [on]\n"
+
+#: src/cfg.c:1375
+#, c-format
+msgid "   -v, --verbose        print information about pressed keys\n"
+msgstr "   -v, --verbose        печатать информацию о нажатых клавишах\n"

@@ -1,0 +1,75 @@
+#! /bin/sh
+
+PACKAGE="tpb"
+CONFIG="/etc/default/$PACKAGE"
+CONFIG_OLD="/etc/X11/Xsession.d/90tpb"
+
+set -e
+. /usr/share/debconf/confmodule || exit 0
+
+case "$1" in
+  configure)
+
+  getent group nvram >/dev/null || addgroup --system nvram
+
+  # make nvram device
+  if [ -e /dev/.devfsd ]; then # devfs enabled
+    if [ -x /usr/sbin/update-devfsd ]; then
+      /usr/sbin/update-devfsd
+    fi
+  elif [ -e /dev/.udev.tdb ]; then # udev enabled
+    # nothing
+    true
+  else # devfs not enabled
+    db_get $PACKAGE/makedev || RET=true
+    if [ "$RET" = true ]; then
+      if ! [ -e /dev/nvram ]; then
+        cd /dev && /sbin/MAKEDEV nvram
+      fi
+      if [ -e /dev/nvram ]; then
+        chown root:nvram /dev/nvram
+        chmod u+rw,g+r /dev/nvram
+      fi
+    fi
+  fi
+
+  # set option for autostart in /etc/X11/Xsession.d/90tpb
+  if ! [ -f $CONFIG ]; then
+    cat <<EOF > $CONFIG
+# set this option to 'true' if you want to start tpb automatically after X has
+# been started for a user. Otherwise set it to 'false'.
+START_TPB=
+EOF
+  fi
+
+  db_get $PACKAGE/autostart
+  START_TPB=$RET
+
+  # backup for $CONFIG with preserved ownership and permissions
+  cp -a -f $CONFIG $CONFIG.tmp
+
+  # re-insert values deleted in $CONFIG but existant in debconf
+  test -z "$START_TPB" || grep -Eq '^ *START_TPB=' $CONFIG || echo "START_TPB=" >> $CONFIG
+
+  # replace values of configuration variables in config file, preserving
+  # all comments and other variables defined by the admin
+  sed -e "
+  s#^ *START_TPB=.*#START_TPB=\"$START_TPB\"#
+  " < $CONFIG > $CONFIG.tmp
+  mv -f $CONFIG.tmp $CONFIG
+  ;;
+
+  abort-upgrade|abort-remove|abort-deconfigure)
+
+  ;;
+
+  *)
+  echo "postinst called with unknown argument \`$1'" >&2
+  exit 1
+  ;;
+esac
+db_stop
+
+#DEBHELPER#
+
+exit 0

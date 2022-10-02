@@ -1,0 +1,601 @@
+# TPB danish translation
+# Copyright (C) 2003 Free Software Foundation, Inc.
+# "Jes R. Lungskov" <jesl@daimi.au.dk>, 2003.
+msgid ""
+msgstr ""
+"Project-Id-Version: tpb 0.6.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2004-05-11 12:11+0200\n"
+"PO-Revision-Date: 2003-03-12 00:00+0100\n"
+"Last-Translator: \"Jes R. Lungskov\" <jesl@daimi.au.dk>\n"
+"Language-Team: Danish <da@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=iso-8859-1\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: src/tpb.c:115
+#, c-format
+msgid "Unable to register signal handler:"
+msgstr "Ude af stand til at registrere signal håndtering"
+
+#: src/tpb.c:207
+msgid "ThinkPad button pressed"
+msgstr "ThinkPad knap trykket"
+
+#: src/tpb.c:225
+#, c-format
+msgid "Zoom is %s\n"
+msgstr "Zoom er %s\n"
+
+#: src/tpb.c:225 src/tpb.c:428 src/tpb.c:497
+msgid "on"
+msgstr "tændt"
+
+#: src/tpb.c:225 src/tpb.c:428 src/tpb.c:497
+msgid "off"
+msgstr "slukket"
+
+#: src/tpb.c:235
+msgid "Zoom on"
+msgstr "Zoom til"
+
+#: src/tpb.c:235
+msgid "Zoom off"
+msgstr "Zoom fra"
+
+#: src/tpb.c:245
+msgid "Home button pressed"
+msgstr "Home knap trykket"
+
+#: src/tpb.c:264
+msgid "Search button pressed"
+msgstr "Search knap trykket"
+
+#: src/tpb.c:283
+msgid "Mail button pressed"
+msgstr "Mail knap trykket"
+
+#: src/tpb.c:302
+#, fuzzy
+msgid "Wireless button pressed"
+msgstr "Mail knap trykket"
+
+#: src/tpb.c:320
+#, fuzzy
+msgid "Favorites button pressed"
+msgstr "Favoritter knap trykket"
+
+#: src/tpb.c:338
+#, fuzzy
+msgid "Reload button pressed"
+msgstr "Genlæs-knap trykket"
+
+#: src/tpb.c:356
+#, fuzzy
+msgid "Abort button pressed"
+msgstr "Afbryd knap trykket"
+
+#: src/tpb.c:374
+#, fuzzy
+msgid "Backward button pressed"
+msgstr "Tilbage knap trykket"
+
+#: src/tpb.c:392
+#, fuzzy
+msgid "Forward button pressed"
+msgstr "Frem knap trykket"
+
+#: src/tpb.c:410
+#, fuzzy
+msgid "Fn button pressed"
+msgstr "Fn knap trykket"
+
+#: src/tpb.c:428
+#, c-format
+msgid "ThinkLight is %s\n"
+msgstr "ThinkLight er %s\n"
+
+#: src/tpb.c:438
+msgid "ThinkLight on"
+msgstr "ThinkLight tændt"
+
+#: src/tpb.c:438
+msgid "ThinkLight off"
+msgstr "ThinkLight slukket"
+
+#: src/tpb.c:464
+msgid "LCD on, CRT off"
+msgstr "LCD tændt, CRT slukket"
+
+#: src/tpb.c:469
+msgid "LCD off, CRT on"
+msgstr "LCD slukket, CRT tændt"
+
+#: src/tpb.c:474
+msgid "LCD on, CRT on"
+msgstr "LCD tændt, CRT tændt"
+
+#: src/tpb.c:479
+#, c-format
+msgid "Display changed: %s\n"
+msgstr "Skærmindstillinger ændret: %s\n"
+
+#: src/tpb.c:488
+msgid "Display"
+msgstr "Skærm"
+
+#: src/tpb.c:497
+#, c-format
+msgid "HV Expansion is %s\n"
+msgstr "HV Expansion er %s\n"
+
+#: src/tpb.c:507
+msgid "HV Expansion on"
+msgstr "HV Expansion til"
+
+#: src/tpb.c:507
+msgid "HV Expansion off"
+msgstr "HV Expansion fra"
+
+#: src/tpb.c:516
+#, c-format
+msgid "Brightness changed: Level %d\n"
+msgstr "Lysstyrke ændret: Niveau %d\n"
+
+#: src/tpb.c:528
+msgid "Brightness"
+msgstr "Lysstyrke"
+
+#: src/tpb.c:551
+#, c-format
+msgid "Volume changed: Level %d\n"
+msgstr "Lydstyrke ændret: Niveau %d\n"
+
+#: src/tpb.c:565
+msgid "Volume"
+msgstr "Lydstyrke"
+
+#: src/tpb.c:574 src/tpb.c:597
+msgid "Mute on"
+msgstr "Mute til"
+
+#: src/tpb.c:574 src/tpb.c:601
+msgid "Mute off"
+msgstr "Mute fra"
+
+#: src/tpb.c:611
+#, c-format
+msgid "Power line changed: %s\n"
+msgstr "Strømforsyning ændret: %s\n"
+
+#: src/tpb.c:611 src/tpb.c:621
+msgid "AC connected"
+msgstr "AC tilsluttet"
+
+#: src/tpb.c:611 src/tpb.c:621
+msgid "AC disconnected"
+msgstr "AC frakoblet"
+
+#: src/tpb.c:631
+msgid "PM AC high"
+msgstr "PM AC høj"
+
+#: src/tpb.c:636
+msgid "PM AC auto"
+msgstr "PM AC auto"
+
+#: src/tpb.c:641
+msgid "PM AC manual"
+msgstr "PM AC manuel"
+
+#: src/tpb.c:646
+msgid "PM AC unknown"
+msgstr "PM AC ukendt"
+
+#: src/tpb.c:650
+#, c-format
+msgid "Power management mode AC changed: %s\n"
+msgstr "Power management mode AC changed: %s\n"
+
+#: src/tpb.c:671
+msgid "PM battery high"
+msgstr "PM batteri høj"
+
+#: src/tpb.c:676
+msgid "PM battery auto"
+msgstr "PM batteri auto"
+
+#: src/tpb.c:681
+msgid "PM battery manual"
+msgstr "PM batteri manuel"
+
+#: src/tpb.c:686
+msgid "PM battery unknown"
+msgstr "PM batteri ukendt"
+
+#: src/tpb.c:690
+#, c-format
+msgid "Power management mode battery changed: %s\n"
+msgstr "Strømstyrings tilstand batteri skiftet: %s\n"
+
+#: src/tpb.c:737 src/tpb.c:754
+#, fuzzy, c-format
+msgid "Unable to fork daemon:"
+msgstr "Ude af stand til at spalte daemon:"
+
+#: src/tpb.c:762
+msgid "Daemon started."
+msgstr "Daemon startet."
+
+#: src/tpb.c:802
+#, c-format
+msgid "Unable to initialize xosd. Running without onsceen display.\n"
+msgstr "Kunne ikke starte xosd. Kører uden onscreen display.\n"
+
+#: src/tpb.c:809
+#, c-format
+msgid "Invalid xosd font \"%s\". Even the default font \"%s\" "
+msgstr "Ukendt xosd skrifttype \"%s\". Selv standard skrifttypen \"%s\" "
+
+#: src/tpb.c:811
+#, c-format
+msgid "is not available. Please add an existing font to your %s file.\n"
+msgstr "er ikke tilgængelig. Tilføj venligst en eksisterende skrifttype til din %s fil.\n"
+
+#: src/tpb.c:813
+#, c-format
+msgid "Running without onsceen display.\n"
+msgstr "Kører uden onscreen display.\n"
+
+#: src/tpb.c:829
+#, c-format
+msgid "Invalid xosd font \"%s\". Running with the default \"%s\".\n"
+msgstr "Ukendt xosd skrifttype \"%s\". Kører med standard  \"%s\".\n"
+
+#: src/tpb.c:836
+#, c-format
+msgid "Invalid xosd color \"%s\". Running with the default \"%s\".\n"
+msgstr "Ukendt xosd farve \"%s\". Kører med standard \"%s\".\n"
+
+#: src/tpb.c:843
+#, c-format
+msgid "Invalid xosd timeout \"%d\". Running with the default \"%d\".\n"
+msgstr "Ugyldigt xosd timeout \"%d\". Kører med standard  \"%d\".\n"
+
+#: src/tpb.c:850
+#, c-format
+msgid "Invalid xosd position \"%d\". Running with the default \"%d\".\n"
+msgstr "Ukendt xosd position \"%d\". Kører med standard \"%d\".\n"
+
+#: src/tpb.c:858
+#, c-format
+msgid "Invalid horizontal xosd offset \"%d\". Running with the default \"%d\".\n"
+msgstr "Ugyldig horisontal xosd offset \"%d\". Kører med standard \"%d\".\n"
+
+#: src/tpb.c:865 src/tpb.c:872
+#, c-format
+msgid "Invalid vertical xosd offset \"%d\". Running with the default \"%d\".\n"
+msgstr "Ugyldigt vertical xosd offset \"%d\". Kører med standard \"%d\".\n"
+
+#: src/tpb.c:880
+#, c-format
+msgid "Invalid shadow xosd offset \"%d\". Running with the default \"%d\".\n"
+msgstr "Ugyldigt skygge xosd offset \"%d\". Kører med standard \"%d\".\n"
+
+#: src/tpb.c:888
+#, fuzzy, c-format
+msgid "Invalid xosd shadow color \"%s\". Running with the default \"%s\".\n"
+msgstr "Ukendt xosd farve \"%s\". Kører med standard \"%s\".\n"
+
+#: src/tpb.c:895
+#, fuzzy, c-format
+msgid "Invalid outline xosd width \"%d\". Running with the default \"%d\".\n"
+msgstr "Ugyldigt xosd timeout \"%d\". Kører med standard  \"%d\".\n"
+
+#: src/tpb.c:902
+#, fuzzy, c-format
+msgid "Invalid xosd outline color \"%s\". Running with the default \"%s\".\n"
+msgstr "Ukendt xosd farve \"%s\". Kører med standard \"%s\".\n"
+
+#: src/tpb.c:911
+#, c-format
+msgid "Invalid xosd alignment \"%d\". Running with default \"%d\".\n"
+msgstr "Ugyldigt xosd alignment \"%d\". Kører med standard \"%d\".\n"
+
+#: src/tpb.c:935
+#, c-format
+msgid "Can't get display name, X may not be running!\n"
+msgstr "Kan ikke få display navn, måske kører X ikke!\n"
+
+#: src/tpb.c:942
+#, c-format
+msgid "Can't open display, X may not be running!\n"
+msgstr "Kan ikke åbne display, måske kører X ikke!\n"
+
+#: src/tpb.c:976 src/tpb.c:1251
+#, c-format
+msgid "Unable to open device %s: "
+msgstr "Kunne ikke åbne enhed %s: "
+
+#: src/tpb.c:983 src/tpb.c:1266
+#, c-format
+msgid "Unable to read from device %s: "
+msgstr "Kunne ikke læse fra enhed %s: "
+
+#: src/tpb.c:990
+#, c-format
+msgid "Unable to close device %s: "
+msgstr "Kunne ikke lukke enhed %s: "
+
+#: src/tpb.c:1225
+#, fuzzy, c-format
+msgid "Unable to fork application \"%s\".\n"
+msgstr "Ude af stand til at spalte applikation \"%s\".\n"
+
+#: src/tpb.c:1226
+#, c-format
+msgid "HINT:\n"
+msgstr "TIP: \n"
+
+#: src/tpb.c:1227
+#, c-format
+msgid "With tpb version 0.6.2 or later you need to specify applications\n"
+msgstr "Med tpb version 0.6.2 eller senere skal du specificere applikationer\n"
+
+#: src/tpb.c:1228
+#, c-format
+msgid "using the whole path to the executable programm.\n"
+msgstr "bruger hele stien til det eksekverbare program. \n"
+
+#: src/tpb.c:1253
+#, c-format
+msgid "To use mixersteps other than %d you need write access to %s.\n"
+msgstr "For at benytte mixertrin udover %d skal du bruge adgang til %s. \n"
+
+#: src/tpb.c:1259 src/tpb.c:1277
+#, c-format
+msgid "Unable to seek device %s: "
+msgstr "Kunne ikke søge enhed %s: "
+
+#: src/tpb.c:1284
+#, c-format
+msgid "Unable to write to device %s: "
+msgstr "Kunne ikke skrive til enhed %s: "
+
+#: src/tpb.c:1305
+#, c-format
+msgid "Unable to open mixer device %s: "
+msgstr "Kunne ikke åbne mixer enhed %s: "
+
+#: src/tpb.c:1312
+#, c-format
+msgid "Unable to read volume from mixer device %s: "
+msgstr "Kunne ikke læse lydstyrke fra mixer enhed %s: "
+
+#: src/tpb.c:1340
+#, c-format
+msgid "Unable to write volume to mixer device %s: "
+msgstr "Kunne ikke skrive lydstyrke til mixer enhed %s: "
+
+#: src/tpb.c:1347
+#, c-format
+msgid "Unable to close mixer device %s: "
+msgstr "Kunne ikke lukke mixer enhed %s: "
+
+#: src/tpb.c:1415
+msgid "There is already a application grabbing some ThinkPad keys.\n"
+msgstr "Der er allerede et program der benytter nogle ThinkPad taster.\n"
+
+#: src/tpb.c:1416
+msgid "Possibly you restarted tpb too fast.\n"
+msgstr "Muligvis genstartede du tpb for hurtigt.\n"
+
+#: src/cfg.c:93 src/cfg.c:149
+msgid "Argument in configuration too long!\n"
+msgstr "Argument i configuration for lang!\n"
+
+#: src/cfg.c:137
+msgid "Keyword in configuration too long!\n"
+msgstr "Keyword i configuration for lang!\n"
+
+#: src/cfg.c:232
+#, c-format
+msgid "Unable to open config file %s: "
+msgstr "Kunne ikke åbne configurations filen %s: "
+
+#: src/cfg.c:408 src/cfg.c:424 src/cfg.c:433 src/cfg.c:977 src/cfg.c:995 src/cfg.c:1005 src/cfg.c:1015 src/cfg.c:1025 src/cfg.c:1035 src/cfg.c:1045 src/cfg.c:1055 src/cfg.c:1065 src/cfg.c:1075
+#: src/cfg.c:1085 src/cfg.c:1095 src/cfg.c:1105 src/cfg.c:1143 src/cfg.c:1154 src/cfg.c:1164 src/cfg.c:1199 src/cfg.c:1217 src/cfg.c:1330 src/cfg.c:1336
+msgid "Not enough memory"
+msgstr "Ikke nok hukommelse"
+
+#: src/cfg.c:921
+#, c-format
+msgid "Illegal apm state: %s\n"
+msgstr "Ulovlig apm tilstand: %s\n"
+
+#: src/cfg.c:945
+#, c-format
+msgid "Illegal powermgt state: %s\n"
+msgstr "Ulovlig powermgt tilstand: %s\n"
+
+#: src/cfg.c:966
+#, fuzzy, c-format
+msgid "Illegal xevents state: %s\n"
+msgstr "Ulovlig xosd tilstand: %s\n"
+
+#: src/cfg.c:985
+#, c-format
+msgid "Illegal polltime: %s\n"
+msgstr "Ulovlig polltime: %s\n"
+
+#: src/cfg.c:1124
+#, c-format
+msgid "Illegal mixer state: %s\n"
+msgstr "Ulovlig mixer tilstand: %s\n"
+
+#: src/cfg.c:1133
+#, c-format
+msgid "Illegal mixersteps: %s\n"
+msgstr "Ulovlig antal mixertrin: %s\n"
+
+#: src/cfg.c:1172
+#, c-format
+msgid "Illegal xosd timeout: %s\n"
+msgstr "Ulovlig xosd timeout: %s\n"
+
+#: src/cfg.c:1180
+#, c-format
+msgid "Illegal xosd offset: %s\n"
+msgstr "Ulovlig xosd offset: %s\n"
+
+#: src/cfg.c:1188
+#, c-format
+msgid "Illegal xosd shadow offset: %s\n"
+msgstr "Ulovlig xosd skygge offset: %s\n"
+
+#: src/cfg.c:1207
+#, fuzzy, c-format
+msgid "Illegal xosd outline width: %s\n"
+msgstr "Ulovlig xosd alignment: %s\n"
+
+#: src/cfg.c:1226
+#, c-format
+msgid "Illegal xosd vertical offset: %s\n"
+msgstr "Ulovlig xosd vertikal offset: %s\n"
+
+#: src/cfg.c:1235
+#, c-format
+msgid "Illegal xosd horizontal offset: %s\n"
+msgstr "Ulovlig xosd horisontal offset: %s\n"
+
+#: src/cfg.c:1239
+msgid "Sorry, OSDHORIZONTAL is only supported by xosd 2.0.0 and above.\n"
+msgstr "Beklager, OSDHORIZONTAL er kun understøttet i xosd 2.0.0 og højere.\n"
+
+#: src/cfg.c:1257
+msgid "Sorry, OSDPOS MIDDLE is only supported by xosd 2.0.0 and above.\n"
+msgstr "Beklager, OSDPOS MIDDLE er kun understøttet i xosd 2.0.0 og højere.\n"
+
+#: src/cfg.c:1265
+#, c-format
+msgid "Illegal xosd position: %s\n"
+msgstr "Ulovlig xosd position: %s\n"
+
+#: src/cfg.c:1291
+#, c-format
+msgid "Illegal xosd alignment: %s\n"
+msgstr "Ulovlig xosd alignment: %s\n"
+
+#: src/cfg.c:1313
+#, c-format
+msgid "Illegal xosd state: %s\n"
+msgstr "Ulovlig xosd tilstand: %s\n"
+
+#: src/cfg.c:1353
+#, c-format
+msgid ""
+"Usage: %s options\n"
+"\n"
+msgstr ""
+"Brug: %s options\n"
+"\n"
+
+#: src/cfg.c:1354
+#, c-format
+msgid "options:\n"
+msgstr "options:\n"
+
+#: src/cfg.c:1355
+#, c-format
+msgid "   -h, --help           display this help\n"
+msgstr "   -h, --help           vis denne hjælp\n"
+
+#: src/cfg.c:1356
+#, c-format
+msgid "   -d, --daemon         start in daemon mode\n"
+msgstr "   -d, --daemon         start i daemon mode\n"
+
+#: src/cfg.c:1357
+#, c-format
+msgid "   -c, --config=FILE    read FILE as additional configuration file\n"
+msgstr "   -c, --config=FILE    Læs FILE som yderligere konfigurations fil\n"
+
+#: src/cfg.c:1358
+#, c-format
+msgid "   -m, --mixer=STATE    use OSS software mixer [off]\n"
+msgstr "   -m, --mixer=STATE    Brug OSS software mixer [off]\n"
+
+#: src/cfg.c:1360
+#, c-format
+msgid "   -o, --osd=STATE      show informations as on-screen display [on]\n"
+msgstr "   -o, --osd=STATE      vis information som on-screen display [on]\n"
+
+#: src/cfg.c:1362
+#, c-format
+msgid "   -p, --poll=DELAY     set delay between polls in microseconds [%d]\n"
+msgstr "   -p, --poll=DELAY     sæt mellemrum mellem optællinger i mikrosekunder [%d]\n"
+
+#: src/cfg.c:1363
+#, c-format
+msgid "   -t, --thinkpad=CMD   string with command and options that should be executed\n"
+msgstr "   -t, --thinkpad=CMD   streng med kommando og options der skal køres\n"
+
+#: src/cfg.c:1364
+#, c-format
+msgid "                        when ThinkPad button is pressed [none]\n"
+msgstr "                        når ThinkPad button trykkes ned [ingen]\n"
+
+#: src/cfg.c:1365
+#, c-format
+msgid "   -H, --home=CMD       command and options for Home button [none]\n"
+msgstr "   -H, --home=CMD       kommando og options for Home knap [ingen]\n"
+
+#: src/cfg.c:1366
+#, c-format
+msgid "   -S, --search=CMD     command and options for Search button [none]\n"
+msgstr "   -S, --search=CMD     kommando og options for Search knap [ingen]\n"
+
+#: src/cfg.c:1367
+#, c-format
+msgid "   -M, --mail=CMD       command and options for Mail button [none]\n"
+msgstr "   -M, --mail=CMD       kommando og options for Mail knap [ingen]\n"
+
+#: src/cfg.c:1368
+#, fuzzy, c-format
+msgid "   -W, --wireless=CMD   command and options for Wireless button [none]\n"
+msgstr "   -M, --mail=CMD       kommando og options for Mail knap [ingen]\n"
+
+#: src/cfg.c:1369
+#, c-format
+msgid "   -C, --callback=CMD   string with command that should be executed for each\n"
+msgstr "   -C, --callback=CMD   streng med kommando der skal køres for hver\n"
+
+#: src/cfg.c:1370
+#, c-format
+msgid "                        pressed button. It is called with pressed button as\n"
+msgstr "                        trykket knap. Den kaldes med den trykkede knap som\n"
+
+#: src/cfg.c:1371
+#, c-format
+msgid "                        first argument and new state as second [none]\n"
+msgstr "                        første argument og ny tilstand som andet [ingen]\n"
+
+#: src/cfg.c:1372
+#, c-format
+msgid "   -A, --apm=STATE      poll /proc/apm for apm information [off]\n"
+msgstr "   -A, --apm=STATE      se i /proc/apm for apm information [fra]\n"
+
+#: src/cfg.c:1373
+#, c-format
+msgid "   -P, --powermgt=STATE display of power management messages [auto]\n"
+msgstr "   -P, --powermgt=STATE vis power management beskeder [auto]\n"
+
+#: src/cfg.c:1374
+#, c-format
+msgid "   -x, --xevents=STATE  grab X11 events of special keys [on]\n"
+msgstr " -x, --xevents=STATE   fang X11 hændelser af specielle taster [on]\n"
+
+#: src/cfg.c:1375
+#, c-format
+msgid "   -v, --verbose        print information about pressed keys\n"
+msgstr "   -v, --verbose        skriv information om trykkede taster\n"

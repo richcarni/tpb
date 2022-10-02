@@ -1,0 +1,75 @@
+#
+#    Translators, if you are not familiar with the PO format, gettext
+#    documentation is worth reading, especially sections dedicated to
+#    this format, e.g. by running:
+#         info -n '(gettext)PO Files'
+#         info -n '(gettext)Header Entry'
+#
+#    Some information specific to po-debconf are available at
+#            /usr/share/doc/po-debconf/README-trans
+#         or http://www.debian.org/intl/l10n/po-debconf/README-trans
+#
+#    Developers do not need to manually edit POT or PO files.
+#
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: tpb 0.6.1-1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2004-08-19 16:56+0200\n"
+"PO-Revision-Date: 2004-08-22 12:02+0900\n"
+"Last-Translator: Hideki Yamane <henrich@samba.gr.jp>\n"
+"Language-Team: Japanese <debian-japanese@lists.debian.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=EUC-JP\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. Type: note
+#. Description
+#: ../tpb.templates:3
+msgid "Group for tpb users changed!"
+msgstr "tpb ユーザ用のグループが変更されました!"
+
+#. Type: note
+#. Description
+#: ../tpb.templates:3
+msgid ""
+"The group of the device file used by tpb changed. Note that you have to move "
+"the tpb users from the old group \"thinkpad\" to the new group \"nvram\"!"
+msgstr ""
+"tpb に利用されるデバイスファイルのグループが変更されました。tpb のユーザは 旧"
+"グループ \"thinkpad\" から新グループ \"nvram\" への変更が必要なのに注意してく"
+"ださい!"
+
+#. Type: boolean
+#. Description
+#: ../tpb.templates:10
+msgid "Create special device file?"
+msgstr "特殊デバイスファイルを作成しますか?"
+
+#. Type: boolean
+#. Description
+#: ../tpb.templates:10
+msgid ""
+"tpb needs a special device file to access the information about pressed "
+"buttons. Users who should be able to use tpb must be in the group nvram."
+msgstr ""
+"tpb はボタンが押されたのを知るのに特殊デバイスファイルにアクセスする必要があ"
+"ります。tpb を使えるユーザは nvram グループに属していなければなりません。"
+
+#. Type: boolean
+#. Description
+#: ../tpb.templates:17
+msgid "Start tpb automatically?"
+msgstr "tpb を自動的に起動しますか?"
+
+#. Type: boolean
+#. Description
+#: ../tpb.templates:17
+msgid ""
+"tpb can be started automatically after X has been started for a user. That "
+"can be either after startx from console or after login with a display "
+"manager."
+msgstr ""
+"tpb は X の起動後に自動的にスタートするようにできます。コンソールから startx "
+"と実行した後とディスプレイマネージャからログイン後のどちらでも可能です。"

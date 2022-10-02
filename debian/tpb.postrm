@@ -1,0 +1,20 @@
+#!/bin/sh
+
+PACKAGE="tpb"
+CONFIG="/etc/default/$PACKAGE"
+
+set -e
+. /usr/share/debconf/confmodule || exit 0
+
+if [ "$1" = purge ] && [ -e $CONFIG ]; then
+  rm $CONFIG
+fi
+
+# Automatically added by dh_installdebconf
+if [ "$1" = purge ] && [ -e /usr/share/debconf/confmodule ]; then
+	. /usr/share/debconf/confmodule
+	db_purge
+fi
+# End automatically added section
+
+exit 0

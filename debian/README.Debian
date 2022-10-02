@@ -1,0 +1,34 @@
+Enabling users to run tpb
+-------------------------
+
+To get information about key presses and status changes of ThinkPad facilities,
+tpb requires access to the RAM in the real-time clock of the system. The device
+/dev/nvram provides access to this memory. Because misuse of this device could
+result in a system damage, only trustworthy people should be able to access the
+device. Thus the device should be open only to a specific group and all people
+that should be able to use tpb should be added to this group. By default the
+tpb package defines a group "nvram" and changes the permissions on /dev/nvram
+to "0640". The only thing the administrator has to do is to add the trustworthy
+people to the group "nvram" in /etc/groups. For owners of R series ThinkPads
+the administrator needs to change the permissions on /dev/nvram to "0660" to
+enable the usage of the OSS mixer in a different resolution than the default 15
+steps.
+
+
+Fonts and locales
+-----------------
+
+For full unicode, you need a lot of glyphs. Since many old fonts only include
+glyphs for ASCII or ISO-8859-*, this is a major problem. X11 does therefor use
+multiple fonts to combine them to a FontSet. Most of the time you needn't have
+a full set of all unicode glyphs, but only use a small subset. This subset
+depends on your locale setting, which specified which glyphs must be available
+for a FontSet to be complete.
+
+Therefor you should use wildcards in your font-specification, else X11 might
+not be able to find all required glyphs and doesn't create a font at all. It's
+a good idea to install additional fonts with other encodings, for example, the
+xfonts-{75dpi,100dpi,base}-transcoded are a good idea.
+
+If it still doesn't work, try to revert back to an non-UTF8 (LANG=de_DE)
+encoding or use good old ASCII (LANG=C).

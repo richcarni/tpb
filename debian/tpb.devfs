@@ -1,0 +1,1 @@
+REGISTER ^misc/nvram PERMISSIONS root.nvram 0640

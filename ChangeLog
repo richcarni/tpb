@@ -1,0 +1,1635 @@
+2005-07-25 10:48  mbr
+
+	* debian/changelog:
+
+	chg: preparations for release.
+
+2005-07-25 10:40  mbr
+
+	* doc/tpbrc, man/tpb.1:
+
+	chg: Minor changes to documentation.
+
+2005-07-25 10:34  mbr
+
+	* po/: de.po, tpb.pot:
+
+	chg: Updated language files.
+
+2005-07-18 16:15  mbr
+
+	* configure.in, doc/tpbrc, man/tpb.1, src/cfg.c, src/cfg.h,
+	  src/tpb.c, src/tpb.h:
+
+	add: New config file options to selectivly turn on and off OSD messages.
+
+2005-04-11 11:59  mbr
+
+	* src/tpb.c:
+
+	- change to users home directory before executing an application (thanks to
+	  Florian Reitmeir)
+
+2005-02-16 14:33  mbr
+
+	* debian/changelog:
+
+	chg: preparations for new Debian package release.
+
+2005-02-16 14:17  mbr
+
+	* debian/: README.Debian, tpb.devfs, tpb.postinst:
+
+	chg: made /dev/nvram not group writeable by default.
+	bug: closes Debian bug #288042
+
+2005-02-16 13:41  mbr
+
+	* man/tpb.1:
+
+	add: Hint about the need for the complete path to executables.
+	bug: closes Debian bug #277311
+
+2005-02-16 13:20  mbr
+
+	* debian/po/cs.po:
+
+	add: Czech translation of tpb debconf messages. Thanks to Miroslav Kure!
+	bug: closes Debian bug #294747
+
+2004-08-31 16:08  mbr
+
+	* README:
+
+	add: X31 is also supported
+
+2004-08-23 13:01  mbr
+
+	* configure.in, debian/changelog, man/tpb.1:
+
+	chg: preparations for release 0.6.3
+
+2004-08-22 23:25  mbr
+
+	* debian/: tpb.config, tpb.postinst:
+
+	fix: udev could be recognized by /dev/udev.tdb NOT by /dev/udev/tdb
+
+2004-08-22 22:48  mbr
+
+	* debian/: tpb.postinst, tpb.xsession:
+
+	chg: removed unneeded quotes
+
+2004-08-22 22:45  mbr
+
+	* debian/tpb.config:
+
+	chg: fixed some issues pointed out by Sam Hocevar.
+
+2004-08-22 22:42  mbr
+
+	* debian/po/fr.po:
+
+	chg: updated French translation. Thanks to Michel Grentzinger!
+
+2004-08-22 15:45  mbr
+
+	* src/tpb.c:
+
+	chg: close the file descriptors the same way both times
+
+2004-08-22 15:40  mbr
+
+	* debian/po/de.po:
+
+	chg: removed fuzzy and updated date
+
+2004-08-22 15:29  mbr
+
+	* debian/po/ja.po:
+
+	chg: updated Japanese debconf texts. Thanks to Hideki Yamane!
+
+2004-08-22 15:24  mbr
+
+	* debian/README.Debian:
+
+	add: added information about /dev/nvram, permissions and groups
+
+2004-08-20 17:29  mbr
+
+	* src/tpb.c:
+
+	chg: close all file descriptors (except stdin, stdout, stderr) in forked
+	     application, because nvram is after performance optimation allways open.
+
+2004-08-20 12:58  mbr
+
+	* src/tpb.c:
+
+	chg: code police :)
+
+2004-08-20 12:56  mbr
+
+	* po/: de.po, tpb.pot:
+
+	chg: synced template and German language with sources
+
+2004-08-20 12:50  mbr
+
+	* debian/tpb.postinst:
+
+	chg: chmod should only turn on needed bits, but not change others.
+
+2004-08-20 12:49  mbr
+
+	* debian/: tpb.config, tpb.preinst:
+
+	chg: only db_set variables if their value is not of zero length.
+	chg: only ask the user for device creation if the device does not match the
+	     requirements already.
+
+2004-08-19 22:59  mbr
+
+	* debian/: rules, tpb.config, tpb.postinst, tpb.postrm,
+	  tpb.preinst, tpb.xsession:
+
+	chg: moved startup configuration from /etc/X11/Xsession.d/90tpb to
+	     /etc/default/tpb
+	chg: reworked the debian scripts in general
+
+2004-08-19 17:12  mbr
+
+	* README:
+
+	chg: indentation
+
+2004-08-19 17:11  mbr
+
+	* debian/: tpb.config, tpb.devfs, tpb.postinst, tpb.templates,
+	  po/de.po, po/templates.pot:
+
+	add: support for udev filesystem
+	chg: adjusted German translation
+
+2004-08-19 11:14  mbr
+
+	* src/tpb.c:
+
+	chg: check if thinkpad_state structure changed at all, before looking into
+	     detail what changed. If nothing changed, just do nothing.
+
+2004-08-18 16:57  mbr
+
+	* src/tpb.c:
+
+	chg: open nvram device only once and never close it in get_nvram_state().
+	     The files will be closed a the end of the program.
+	     This decreases the CPU load further. Now it is almost the same as not
+	     running tpb at all.
+
+2004-08-18 16:00  mbr
+
+	* src/cfg.h:
+
+	fix: now really use 200ms as default
+
+2004-08-18 15:57  mbr
+
+	* doc/tpbrc, man/tpb.1, src/cfg.c, src/cfg.h, src/tpb.c:
+
+	chg: adjusted poll interval to 200ms, which has a acceptable responsiveness
+	     and CPU load
+	chg: read only needed bytes from nvram
+	add: dynamic default display in the help screen
+
+2004-08-18 13:22  mbr
+
+	* debian/control:
+
+	chg: fixed maintainer to match my Debian mail address
+
+2004-08-18 12:47  mbr
+
+	* debian/: README.Debian, changelog, control:
+
+	chg: preparations for new Debian package release.
+
+2004-08-18 12:38  mbr
+
+	* CREDITS:
+
+	add: forgot Soren S. Jorvang in CREDITS for his NetBSD support
+
+2004-07-14 17:21  mbr
+
+	* debian/tpb.xsession:
+
+	chg: use = instead of == in test for strict POSIX compliance.
+
+2004-05-19 16:26  mbr
+
+	* man/tpb.1, debian/changelog:
+
+	chg: preparations for release 0.6.2
+
+2004-05-18 13:32  mbr
+
+	* po/: da.po, de.po, ru.po, tpb.pot:
+
+	chg: updated Russian translation (thanks to Grigory Batalov!), Danish
+	     translation (thanks to Jes R. Lungskov) and German translation.
+
+2004-05-18 13:21  mbr
+
+	* src/tpb.c:
+
+	fix: corrected typo programm -> program
+
+2004-05-14 13:29  mbr
+
+	* doc/callback_example.sh:
+
+	add: wireless keypress event added to callback example.
+
+2004-05-14 11:07  mbr
+
+	* po/ru.po:
+
+	chg: updated Russian translation. Many thanks to Grigory Batalov!
+
+2004-05-14 10:55  mbr
+
+	* po/: de.po, tpb.pot:
+
+	chg: updated translation template and German translation
+
+2004-05-11 13:20  mbr
+
+	* man/tpb.1:
+
+	fix: quoted some '-' signs to get hyphens instead of minus signs.
+
+2004-05-07 14:23  mbr
+
+	* tpb.spec:
+
+	del: because the major rpm based distributions (Red Hat, Mandrake, Suse)
+	     already include tpb and Dag Wieers has also an package and this file is
+	     not supported it should be removed.
+
+2004-05-05 12:25  mbr
+
+	* README:
+
+	add: new supported ThinkPad X40
+	add: note about the need of fill path for applications
+
+2004-04-29 17:45  mbr
+
+	* doc/nvram.txt, src/tpb.c:
+
+	fix: workaround for display state, because kernel 2.6 doesn't toggle bit 6 in
+	     byte 0x57 of nvram anymore.
+
+2004-04-29 13:12  mbr
+
+	* configure.in, man/tpb.1, po/de.po, po/tpb.pot, src/cfg.c,
+	  src/cfg.h, src/tpb.c, src/tpb.h:
+
+	add: hint about the need of full paths for applications if fork fails.
+	chg: preparation for release 0.6.2
+
+2004-04-22 17:05  mbr
+
+	* configure.in, src/tpb.c:
+
+	chg: tpb now compiles with xosd and X11, with X11 only and without X11 (mostly
+	     useless :)
+
+2004-04-22 15:17  mbr
+
+	* src/cfg.h:
+
+	chg: make tpb working again with xosd 0.7.0, which has no osd_default_font.
+
+2004-04-22 15:15  mbr
+
+	* acconfig.h, aclocal/libxosd_version.m4:
+
+	chg: don't use the deprecated acconfig.h for templates any more.
+	     AC_DEFINEs third argument is used instead.
+
+2004-04-21 16:37  mbr
+
+	* doc/tpbrc, man/tpb.1, src/cfg.h:
+
+	fix: changed default font from 10x20 to char *osd_default_font.
+	bug: closes Savannah bug #8464
+	bug: closes Debian bug #242765
+
+2004-04-21 14:50  mbr
+
+	* debian/control:
+
+	chg: update to last version of Debian policy
+
+2004-04-17 13:11  mbr
+
+	* debian/po/ja.po:
+
+	add: Japanese translation of debconf templates, thanks to Hideki Yamane!
+	     (Closes: #242253)
+
+2004-04-17 01:37  mbr
+
+	* po/de.po, po/tpb.pot, src/tpb.c:
+
+	chg: reworked the generation of the argument vector, again. Now it supports
+	     quoted stings within the command.
+
+2004-04-16 23:40  mbr
+
+	* doc/tpbrc, man/tpb.1, po/de.po, po/tpb.pot, src/tpb.c, src/tpb.h:
+
+	chg: reworked signal handling of SIG_CHLD. The signal is catched and not
+	     ignored.
+	chg: applications are started using execv() instead of system()
+	bug: Fixes savannah bugs #3260 and #8223 (hopefully :))
+
+2004-03-26 10:36  mbr
+
+	* CREDITS, doc/nvram.txt, doc/tpbrc, man/tpb.1, po/de.po,
+	  po/tpb.pot, src/cfg.c, src/cfg.h, src/tpb.c, src/tpb.h:
+
+	add: applied patch from Mika Fischer that enables the Wireless key combo.
+	chg: updated german translation for Wireless key combo.
+
+2004-02-03 11:11  mbr
+
+	* src/tpb.c:
+
+	add: patch from Soren S. Jorvang that makes tpb compile and run on NetBSD.
+
+2004-01-31 09:26  mbr
+
+	* README:
+
+	add: new information about R32 Thinkpads
+
+2004-01-19 10:51  mbr
+
+	* configure.in, debian/changelog, man/tpb.1:
+
+	chg: preparations for new release 0.6.1
+
+2004-01-19 10:45  mbr
+
+	* CREDITS:
+
+	add: added credit to Grigory Batalov for his Russian translation
+
+2003-12-26 21:00  uid66905
+
+	* acconfig.h, aclocal/libxosd_version.m4, src/cfg.c, src/cfg.h,
+	  src/tpb.c:
+
+	chg: changed the version numbering of xosd, again. Now two digit version
+	     number parts are possible.
+
+2003-12-26 11:27  uid66905
+
+	* man/tpb.1:
+
+	add: some info about X11 event grabbing behaviour
+
+2003-12-25 23:46  uid66905
+
+	* acconfig.h, aclocal/libxosd_version.m4, doc/tpbrc, po/de.po,
+	  po/tpb.pot, src/cfg.c, src/cfg.h, src/tpb.c, src/tpb.h,
+	  man/tpb.1:
+
+	add: support for shadow color, outline and outline color
+	chg: new version handling for xosd versions
+
+2003-12-25 10:51  uid66905
+
+	* CREDITS:
+
+	add: applied patch from Michael Stuermer to grab only X events of keys that are
+	     configured
+
+2003-12-25 09:56  uid66905
+
+	* README:
+
+	add: X30 works, too.
+
+2003-12-25 09:52  uid66905
+
+	* src/tpb.c:
+
+	add: applied patch from Michael Stuermer to grab only X events of keys that are
+	     configured
+
+2003-12-03 15:45  mbr
+
+	* Makefile.dist, configure.in, po/ru.po:
+
+	add: Russian translation. Thanks to Grigory Batalov!
+
+2003-12-03 15:37  mbr
+
+	* README:
+
+	- T 40 is also supported
+
+2003-08-20 14:59  mbr
+
+	* po/de.po:
+
+	chg: updated translation for additional option
+
+2003-08-20 14:52  mbr
+
+	* doc/tpbrc, man/tpb.1, src/cfg.c, src/cfg.h, src/tpb.c, src/tpb.h:
+
+	add: new commandline switch and config file option to turn off X11 event
+	     grabbing
+	chg: reindented
+
+2003-08-20 14:50  mbr
+
+	* configure.in:
+
+	chg: reindented
+
+2003-08-20 14:48  mbr
+
+	* README:
+
+	add: ThinkPad R40 is also supported
+
+2003-08-20 14:47  mbr
+
+	* Makefile.dist:
+
+	chg: use alphabetic order
+
+2003-08-10 23:12  mbr
+
+	* debian/changelog, man/tpb.1:
+
+	chg: preparations for new release 0.6.0
+
+2003-08-10 23:08  mbr
+
+	* configure.in:
+
+	chg: preparations for new release 0.6.0
+
+2003-08-10 23:06  mbr
+
+	* po/: da.po, de.po, tpb.pot:
+
+	chg: updated using the newest sources (just line numbers changed)
+
+2003-08-10 23:00  mbr
+
+	* doc/nvram.txt:
+
+	chg: replaced all TABs
+
+2003-07-24 11:14  mbr
+
+	* debian/po/fr.po:
+
+	chg: updated french translation
+
+2003-07-22 22:37  mbr
+
+	* CREDITS, debian/tpb.devfs, doc/tpbrc, man/tpb.1, src/cfg.c,
+	  src/cfg.h, src/tpb.c:
+
+	chg: new default for cfg.nvram: try to open /dev/nvram if that fails try to
+	     open /dev/misc/devfs
+
+2003-07-22 14:58  mbr
+
+	* debian/: rules, tpb.config, tpb.postinst, tpb.templates,
+	  tpb.xsession, po/de.po, po/templates.pot:
+
+	chg: added debconf question about autostart of tpb and script for autostart
+
+2003-07-22 13:17  mbr
+
+	* debian/po/de.po:
+
+	add: german translation for debconf templates
+
+2003-07-22 12:53  mbr
+
+	* debian/po/fr.po:
+
+	add: french translation for debconf templates, thanks to Michel Grentzinger <mic.grentz@online.fr> (Closes: #202202)
+
+2003-07-22 12:53  mbr
+
+	* debian/control:
+
+	chg: updated Debian policy to Version 3.6.0
+	chg: use gettext for the debconf templates (Closes: #202201)
+
+2003-07-22 12:53  mbr
+
+	* debian/: tpb.templates, po/POTFILES.in, po/templates.pot:
+
+	chg: use gettext for the debconf templates (Closes: #202201)
+
+2003-07-21 12:19  mbr
+
+	* po/da.po:
+
+	chg: updated danish translation. Thanks to Jes R. Lungskov!
+
+2003-07-17 10:45  mbr
+
+	* po/Makefile.in.in:
+
+	chg: also delete *.gmo files for distclean
+
+2003-05-19 11:16  mbr
+
+	* doc/callback_example.sh, doc/tpbrc, man/tpb.1, po/de.po,
+	  po/tpb.pot, src/cfg.c, src/cfg.h, src/tpb.c, src/tpb.h:
+
+	chg: Changed the names of the new supported keys. As they are web keys, they
+	     should have other names:
+
+	     zoom in      -> favorites
+	     zoom out     -> reload
+	     close window -> abort
+	     page left    -> backward
+	     page right   -> forward
+
+2003-05-16 14:43  mbr
+
+	* src/: tpb.c, tpb.h:
+
+	fix: use the bit 0/bit 1 solution only for toggle values, not for values with
+	     a range!
+
+2003-05-16 12:48  mbr
+
+	* src/: tpb.c, tpb.h:
+
+	chg: in structure thinkpad_state:
+	     - nvram values are WRITTEN to bit 0
+	     - xevents TOGGLE bit 1
+	     This avoids, that a xevent toggle is overwritten in the next cycle by the
+	     nvram value. This was the case for Home, Mail and Search
+
+2003-05-16 11:40  mbr
+
+	* po/: de.po, tpb.pot:
+
+	add: support for keys that only generate xevents and don't change the nvram.
+	     These keys arre available on the A series thinkpads. Supported keys are
+			 Home, Search, Mail, Zoom In, Zoom Out, Close Window, Page Left,
+			 Page Right and the FN key.
+
+2003-05-16 11:25  mbr
+
+	* README, debian/control, doc/callback_example.sh, doc/tpbrc,
+	  man/tpb.1, src/cfg.c, src/cfg.h:
+
+	add: support for keys that only generate xevents and don't change the nvram.
+	     These keys arre available on the A series thinkpads. Supported keys are
+			 Home, Search, Mail, Zoom In, Zoom Out, Close Window, Page Left,
+			 Page Right and the FN key.
+
+2003-05-16 11:23  mbr
+
+	* src/: tpb.c, tpb.h:
+
+	add: support for keys that only generate xevents and don't change the nvram.
+	     These keys arre available on the A series thinkpads. Supported keys are
+			 Home, Search, Mail, Zoom In, Zoom Out, Close Window, Page Left,
+			 Page Right and the FN key.
+	chg: renamed struct nvram_state to thinkpad_state, because in is much more
+	     than the nvram state
+
+2003-05-15 13:46  mbr
+
+	* src/tpb.c:
+
+	chg: changed the type of the nvram state struct members.
+	chg: make use of the changes prototypes in cfg.[ch]
+	chg: various code cleanup.
+
+2003-05-15 13:18  mbr
+
+	* src/tpb.h:
+
+	chg: changed the type of the nvram state struct members
+
+2003-05-15 13:13  mbr
+
+	* src/cfg.c:
+
+	chg: modified the argument list of parse_cfg_file(), override_cfg(),
+	     parse_option(), init_cfg() and override_cfg(). They include the cfg
+	     struct they modify.
+	add: free_cfg() was added to release all allocated strings in the cfg struct.
+	chg: override_cfg() now uses now strdup() to copy strings.
+	chg: various code cleanup.
+
+2003-05-15 13:07  mbr
+
+	* src/cfg.h:
+
+	chg: modified the argument list of parse_cfg_file(), override_cfg(),
+	     parse_option(), init_cfg() and override_cfg(). They include the cfg
+	     struct they modify.
+	add: free_cfg() was added to release all allocated strings in the cfg struct.
+
+2003-05-06 15:43  mbr
+
+	* README:
+
+	add: remark that the A series thinkpads only work partial.
+
+2003-04-30 10:24  mbr
+
+	* doc/callback_example.sh:
+
+	fix: typo (thanks to Michael Hauser :)
+
+2003-04-10 10:05  mbr
+
+	* configure.in, debian/changelog, man/tpb.1:
+
+	chg: preparations for new release 0.5.1
+
+2003-04-10 09:57  mbr
+
+	* src/: cfg.c, cfg.h:
+
+	fix: osdshadow and osdhorizontal wasn't set to UNDEFINED for config file
+	     parsing. Thus these values were ignored.
+	chg: moved clearing of the cfg struct from parse_cfg_file() and parse_option()
+	     to a separate function clear_cfg()
+
+2003-04-05 21:39  mbr
+
+	* debian/changelog:
+
+	chg: preparation for release 0.5.0
+
+2003-03-28 22:28  mbr
+
+	* tpb.spec:
+
+	add: include locale files in rpm package
+
+2003-03-27 13:56  mbr
+
+	* CREDITS, tpb.spec:
+
+	add: spec file for building rpm packages. Thanks to Dag Wieers!
+	     Don't blame him if it doesn't work, because I made some changes.
+
+2003-03-27 13:35  mbr
+
+	* README:
+
+	add: hint where to find the template configuration file
+
+2003-03-27 13:33  mbr
+
+	* configure.in, src/Makefile.am:
+
+	fix: "./configure && make && make install" copied the configuration file to
+	     /usr/local/etc/tpbrc, but tpb looked for it at /etc/tpbrc
+
+2003-03-26 14:01  mbr
+
+	* Makefile.dist, configure.in, po/da.po, po/dk.po:
+
+	fix: stupid me, "da" is the shortcut for danish _NOT_ "dk"
+
+2003-03-26 13:29  mbr
+
+	* configure.in:
+
+	add: danish translation. Thanks to Jes R. Lungskov!
+
+2003-03-26 13:28  mbr
+
+	* README:
+
+	add: tpb works also on X 20
+
+2003-03-26 13:23  mbr
+
+	* debian/: conffiles, control, copyright:
+
+	fix: killed lintian warnings and errors
+
+2003-03-16 12:46  mbr
+
+	* CREDITS, po/dk.po:
+
+	add: danish translation. Thanks to Jes R. Lungskov!
+
+2003-03-13 09:05  mbr
+
+	* po/de.po:
+
+	chg: synced
+	chg: new translation
+
+2003-03-13 09:01  mbr
+
+	* po/tpb.pot:
+
+	chg: synched
+
+2003-03-13 08:19  mbr
+
+	* src/tpb.c:
+
+	fix: fixed output when write access to nvram is needed but not available
+
+2003-03-13 07:56  mbr
+
+	* README:
+
+	add: A30 also works
+
+2003-03-13 07:56  mbr
+
+	* src/tpb.c, src/tpb.h, src/cfg.c, src/cfg.h, doc/tpbrc, man/tpb.1:
+
+	chg: removed the need of write access to nvram
+	chg: default of mixer steps changed to 14 to avoid write access
+
+2003-02-24 15:41  mbr
+
+	* src/tpb.c:
+
+	chg: make sure that volume_level has the same value that we write back to
+	     nvram (this is nicer, but functionality is exactly as before).
+
+2003-02-23 17:03  mbr
+
+	* po/: de.po, tpb.pot:
+
+	chg: updated for upcomming release 0.5.0
+
+2003-02-17 18:34  mbr
+
+	* aclocal/libxosd_version.m4, src/cfg.c, src/cfg.h, src/tpb.c:
+
+	fix: better backward compatibility to xosd version 0.7.0
+
+2003-02-16 14:48  mbr
+
+	* aclocal/libxosd_version.m4:
+
+	fix: because libxosd 0.7.0 had no xosd-config script, CFLAGS and LIBS didn't
+	     include the needed flags.
+
+2003-01-30 15:02  mbr
+
+	* README:
+
+	add: tpb works also on X series
+
+2003-01-12 20:27  mbr
+
+	* debian/control:
+
+	chg: not gettext is also a build dependency
+
+2003-01-10 15:43  mbr
+
+	* po/: de.po:
+
+	chg: Some fixes
+
+2003-01-10 15:05  mbr
+
+	* Makefile.dist:
+
+	chg: aclocal includes now local autoconf m4 macros
+
+2003-01-10 15:03  mbr
+
+	* aclocal/: codeset.m4, gettext.m4, glibc21.m4, iconv.m4,
+	  isc-posix.m4, lcmessage.m4, libxosd.m4, progtest.m4:
+
+	add: m4 macros, that are needed for bootstrap and are not commonly available
+	     on systems.
+
+2003-01-10 15:00  mbr
+
+	* aclocal/libxosd_version.m4:
+
+	chg: file moved from project root. There was it names acinclude.m4
+
+2003-01-10 14:57  mbr
+
+	* acinclude.m4:
+
+	del: moved file to aclocal/libxosd_version.m4
+
+2003-01-10 14:14  mbr
+
+	* po/de.po:
+
+	del: removed fuzzy flag
+	add: completed the translations
+	chg: corrected typos and wrong translations
+
+2003-01-10 14:12  mbr
+
+	* po/tpb.pot:
+
+	del: removed the fuzzy flag
+
+2003-01-10 13:09  mbr
+
+	* Makefile.am, Makefile.dist, README, debian/docs:
+
+	chg: reflect the the new non-flat project directory structure.
+
+2003-01-10 13:05  mbr
+
+	* ABOUT-NLS, configure.in, intl/ChangeLog, intl/Makefile.in,
+	  intl/VERSION, intl/bindtextdom.c, intl/config.charset,
+	  intl/dcgettext.c, intl/dcigettext.c, intl/dcngettext.c,
+	  intl/dgettext.c, intl/dngettext.c, intl/explodename.c,
+	  intl/finddomain.c, intl/gettext.c, intl/gettext.h,
+	  intl/gettextP.h, intl/hash-string.h, intl/intl-compat.c,
+	  intl/l10nflist.c, intl/libgettext.h, intl/libgnuintl.h,
+	  intl/loadinfo.h, intl/loadmsgcat.c, intl/localcharset.c,
+	  intl/locale.alias, intl/localealias.c, intl/ngettext.c,
+	  intl/plural.c, intl/plural.y, intl/ref-add.sin, intl/ref-del.sin,
+	  intl/textdomain.c, po/ChangeLog, po/Makefile.in.in,
+	  po/POTFILES.in, po/de.po, po/tpb.pot:
+
+	add: introduced i18n support
+
+2003-01-10 12:56  mbr
+
+	* man/Makefile.am:
+
+	add: file needed because of the new non-flat project directory structure.
+
+2003-01-10 12:48  mbr
+
+	* man/tpb.1:
+
+	chg: file moved from project root
+	chg: incremented version number
+
+2003-01-10 12:47  mbr
+
+	* tpb.1:
+
+	chg: file moved to man/ directory
+
+2003-01-10 12:46  mbr
+
+	* src/Makefile.am:
+
+	add: file needed because of the new non-flat project directory structure.
+
+2003-01-10 12:46  mbr
+
+	* src/: cfg.c, cfg.h, tpb.c, tpb.h:
+
+	chg: file moved from project root
+	add: introduced i18n support
+
+2003-01-10 12:44  mbr
+
+	* cfg.c, cfg.h, tpb.c, tpb.h:
+
+	chg: file moved to src/ directory
+
+2003-01-10 12:42  mbr
+
+	* doc/Makefile.am:
+
+	add: file needed because of the new non-flat project directory structure.
+
+2003-01-10 12:41  mbr
+
+	* doc/: callback_example.sh, nvram.txt, tpbrc:
+
+	chg: file moved from project root
+
+2003-01-10 12:39  mbr
+
+	* callback_example.sh, nvram.txt, tpbrc:
+
+	chg: file moved to doc/ directory
+
+2002-12-17 15:45  mbr
+
+	* tpb.1:
+
+	chg: adapted the general description to the current abilities.
+
+2002-12-17 15:38  mbr
+
+	* README:
+
+	add: hints for other documentation.
+
+2002-12-12 11:09  mbr
+
+	* configure.in, tpb.1, debian/changelog:
+
+	chg: preparation for release 0.4.2
+
+2002-12-11 14:15  mbr
+
+	* tpb.c:
+
+	add: deinit xosd when running without xosd. Disabled at the moment because of
+	     a bug in the xosd lib.
+
+2002-12-11 10:20  mbr
+
+	* tpb.1, tpbrc:
+
+	chg: turn off /proc/apm polling by default because it causes problems on some
+	     ThinkPads.
+
+2002-12-11 10:18  mbr
+
+	* cfg.c, cfg.h:
+
+	chg: use UNDEFINED enum instead of -1 for undefined state.
+	chg: set the defaults of switches in header not in code.
+	chg: turn off /proc/apm polling by default because it causes problems on some
+	     ThinkPads.
+
+2002-12-10 13:30  mbr
+
+	* README:
+
+	fix: typo
+
+2002-12-10 13:23  mbr
+
+	* Makefile.dist, README:
+
+	add: a Makefile to bootstrap and cleanup cvs source trees
+
+2002-12-10 12:34  mbr
+
+	* tpb.1:
+
+	fix: corrected the version number
+
+2002-12-03 12:57  mbr
+
+	* acinclude.m4:
+
+	chg: kill messages on stderr
+
+2002-12-03 11:31  mbr
+
+	* acinclude.m4:
+
+	add: include AM_PATH_LIBXOSD (from the libxosd-dev debian package) to avoid
+	     problems users have if they don't use debian.
+
+2002-11-28 09:39  mbr
+
+	* tpb.c:
+
+	chg: moved xosd initialization and daemonize to separate functions.
+
+2002-11-26 17:46  mbr
+
+	* tpb.c:
+
+	chg: changed error texts.
+
+2002-11-26 17:41  mbr
+
+	* tpb.c:
+
+	chg: better error handling for xosd font. Now exits if the default font is not
+	     available on the target system.
+
+2002-11-22 13:04  mbr
+
+	* cfg.c, cfg.h, tpb.1, tpb.c, tpbrc:
+
+	add: switch to turn off polling of /proc/apm. R31 generates mouse and keyboard
+	     events when polling too often.
+
+2002-11-22 12:43  mbr
+
+	* cfg.h, tpb.1, tpbrc:
+
+	chg: use a default font, that should be available everywhere.
+
+2002-11-19 14:35  mbr
+
+	* configure.in, debian/changelog:
+
+	add: new release 0.4.1
+
+2002-11-19 14:23  mbr
+
+	* README:
+
+	add: T20 works too.
+
+2002-11-18 22:29  mbr
+
+	* debian/: rules, tpb.devfs, tpb.postinst:
+
+	add: support for devfs in debian package
+
+2002-11-18 15:43  mbr
+
+	* tpb.c:
+
+	chg: renamed get_ac_line_state() to get_apm_state().
+
+2002-11-15 23:59  mbr
+
+	* tpb.c:
+
+	chg: the state of the ac line is now read from /proc/apm instead of nvram.
+	     nvram bahves different if thinkpad was booted with ac connected or
+	     disconnected.
+
+2002-11-15 23:57  mbr
+
+	* README:
+
+	add: T 23 works too
+
+2002-11-15 23:57  mbr
+
+	* cfg.h, tpb.1, tpbrc:
+
+	chg: shadow offset defaults now to 2
+
+2002-11-10 21:17  mbr
+
+	* cfg.c:
+
+	chg: use VERSION define to show version number in help screen.
+
+2002-11-08 13:47  mbr
+
+	* tpbrc:
+
+	fix: typos in comment
+
+2002-11-07 22:32  mbr
+
+	* tpb.c:
+
+	chg: use the xosd_set_* functions for all settings. So the user will get a
+	     message what option is wrong.
+
+2002-11-07 22:30  mbr
+
+	* tpb.1, tpbrc:
+
+	add: describe which options are supported only by xosd versions above 2.0.0
+
+2002-11-07 22:29  mbr
+
+	* cfg.c:
+
+	add: give hints if a option is not supported by the used xosd version
+
+2002-11-07 15:45  mbr
+
+	* acconfig.h, acinclude.m4, configure.in:
+
+	fix: corrected detecting of xosd >= 2.0.0
+
+2002-11-07 15:23  mbr
+
+	* cfg.c, cfg.h, tpb.1, tpbrc:
+
+	add: support for middle position
+
+2002-11-07 15:09  mbr
+
+	* tpb.c:
+
+	add: added better handling for invalid xosd settings.
+
+2002-11-07 15:08  mbr
+
+	* cfg.h:
+
+	fix: typo
+
+2002-11-07 12:49  mbr
+
+	* debian/tpb.templates:
+
+	chg: again simplified the template.
+
+2002-11-07 12:29  mbr
+
+	* acinclude.m4, cfg.c, cfg.h, tpb.1, tpb.c, tpbrc:
+
+	add: daemon mode
+	add: (yet) untested support for xosd >= 2.0.0
+
+2002-11-06 12:39  mbr
+
+	* debian/tpb.templates:
+
+	chg: removed some warnings.
+
+2002-11-06 10:58  mbr
+
+	* tpbrc:
+
+	chg: vastly improved.
+
+2002-11-06 10:46  mbr
+
+	* tpb.1:
+
+	fix: the default value of POWERMGT was wrong.
+	fix: the default osd font was not shown in man page.
+
+2002-11-06 09:50  mbr
+
+	* debian/menu:
+
+	del: removed unused menu file.
+
+2002-11-06 09:13  mbr
+
+	* debian/dirs:
+
+	del: removed redundant file.
+
+2002-11-05 16:19  mbr
+
+	* acconfig.h, cfg.h, configure.in:
+
+	fix: pay attention to --sysconfdir option given to configure script
+
+2002-11-05 16:16  mbr
+
+	* cfg.c:
+
+	fix: bumped version number in help message
+
+2002-11-04 13:00  mbr
+
+	* debian/changelog:
+
+	add: new release 0.4.0
+
+2002-11-04 12:53  mbr
+
+	* tpb.c:
+
+	fix: corrected check for initialized xosd.
+
+2002-10-18 10:49  mbr
+
+	* tpb.c:
+
+	fix: now the simulation of the display state should really work.
+
+2002-10-15 12:49  mbr
+
+	* cfg.c, tpb.c:
+
+	chg: return is not a function.
+
+2002-10-14 10:14  mbr
+
+	* tpb.c, tpb.h:
+
+	add: simulate a tri-state display state, if nvram only has display toggle and
+	     no display state. (T30 shows this behaviour)
+
+2002-10-11 11:48  mbr
+
+	* callback_example.sh, tpb.1, tpb.c, tpb.h:
+
+	add: deconding now also hv expansion (Fn-F8)
+	add: display osd on nearly everything
+	fix: zoom was iverted
+
+2002-10-10 15:01  mbr
+
+	* tpb.c:
+
+	fix: the verbose display of zoom depended on thinklight
+
+2002-10-10 14:28  mbr
+
+	* README:
+
+	chg: updated
+
+2002-10-10 14:27  mbr
+
+	* callback_example.sh, cfg.c, cfg.h, tpb.1, tpb.c, tpb.h,
+	  debian/docs:
+
+	add: support for a callback program. It is called on any state change with an
+	     identifier as first option and the new state as second.
+
+2002-10-10 01:43  mbr
+
+	* tpb.c:
+
+	add: check for version of xosd and define HAVE_LIBXOSD0 or HAVE_LIBXOSD1 to
+	     support both api
+	chg: remove the fork stuff, now that Ifound that -lpthread fixes all my
+	     threading problems with xosd :)
+
+2002-10-10 01:41  mbr
+
+	* acconfig.h, acinclude.m4:
+
+	add: check for version of xosd and define HAVE_LIBXOSD0 or HAVE_LIBXOSD1 to
+	     support both api
+
+2002-10-09 18:38  mbr
+
+	* tpb.c:
+
+	chg: now xosd and fork work together, finally. xosd now runs in the child.
+	fix: compile error when xosd was not available.
+
+2002-10-09 18:36  mbr
+
+	* cfg.c:
+
+	add: some comments
+
+2002-10-09 18:36  mbr
+
+	* configure.in:
+
+	chg: better checking for the needed xosd version
+
+2002-10-09 18:34  mbr
+
+	* acinclude.m4:
+
+	add: function to check for the needed xosd version
+
+2002-10-09 18:34  mbr
+
+	* acconfig.h:
+
+	add: define define HAVE_LIBXOSD
+
+2002-10-09 16:43  mbr
+
+	* nvram.txt:
+
+	add: description for the three additional buttons pointed out by Robin
+	     Stephenson.
+
+2002-10-07 11:03  mbr
+
+	* cfg.c, cfg.h, tpb.c:
+
+	chg: introduced a enum for states of settings.
+
+2002-10-07 10:39  mbr
+
+	* cfg.c:
+
+	fix: use strdup() to initialize cfg.mixerdev
+
+2002-09-27 09:24  mbr
+
+	* cfg.c:
+
+	fix: corrected the default value for powermanagement in help message.
+
+2002-09-27 09:02  mbr
+
+	* debian/changelog:
+
+	chg: merge of tpb-0_3_0-bugfixes branch
+
+2002-09-26 22:21  mbr
+
+	* debian/: tpb.postinst.debhelper, tpb.postrm.debhelper,
+	  tpb.prerm.debhelper:
+
+	chg: no need to version control autogenerated files
+
+2002-09-26 22:15  mbr
+
+	* cfg.c, cfg.h:
+
+	chg: set POWERMGT to auto as default
+	chg: added 'DEFAULT_' prefix to default defines
+
+2002-09-26 22:13  mbr
+
+	* tpb.c:
+
+	chg: better signal handling for SIGCHLD, SIGABRT, SIGINT, SIGTERM
+	chg: get rid of the unused osd_pid variable
+	fix: initialize vol variable before enterig while(1) loop
+
+2002-09-26 22:06  mbr
+
+	* tpbrc:
+
+	chg: set POWERMGT to auto as default
+
+2002-09-26 11:16  mbr
+
+	* cfg.c, cfg.h, tpb.1, tpb.c, tpbrc:
+
+	add: new configuration option for alignment of the osd display.
+
+2002-09-25 22:50  mbr
+
+	* tpb.c:
+
+	chg: run osd_loop() in parent and 'normal' tpb stuff in child. Needed because
+	     xosd_init() never returns in a child process. Ugly, but works :)
+
+2002-09-25 14:07  mbr
+
+	* tpb.c:
+
+	fix: message about ac connetion was inverted.
+
+2002-09-25 13:17  mbr
+
+	* debian/changelog:
+
+	chg: updated for release 0.3.1
+
+2002-09-25 12:37  mbr
+
+	* tpb.c:
+
+	  fix: xosd_init() now takes one more argument since 1.0.0
+
+2002-09-16 11:47  mbr
+
+	* tpb.c:
+
+	chg: moved all the osd stuff to a separate process to avoid fork() <->
+	     pthread problems.
+
+2002-09-16 11:40  mbr
+
+	* cfg.c:
+
+	chg: more reformatting
+
+2002-09-11 21:31  mbr
+
+	* cfg.c, cfg.h, tpb.h, tpbrc:
+
+	chg: lots of indents, line breaks and renames for better readability.
+
+2002-09-11 21:30  mbr
+
+	* tpb.1:
+
+	fix: typo
+
+2002-09-11 21:17  mbr
+
+	* tpb.c:
+
+	add: function to check if apmiser is running. Will be used to automatically
+	     turn of power management messages.
+	chg: lots of indents, line breaks and renames for better readability.
+
+2002-09-10 21:09  mbr
+
+	* CREDITS, README, cfg.c, cfg.h, tpb.1, tpb.c, tpb.h,
+	  debian/tpb.postinst.debhelper, debian/tpb.postrm.debhelper,
+	  debian/tpb.prerm.debhelper:
+
+	add: applied Robin Stephenson patch to support the three additional buttons on
+	     ThinkPad S series
+
+2002-08-22 13:23  mbr
+
+	* tpb.1:
+
+	chg: made description of apmiser option a little bit clearer.
+
+2002-08-22 13:11  mbr
+
+	* tpb.1, tpbrc:
+
+	add: switch to turn off power management messages on osd. Handy when using
+	     apmiser, which changes powermanagement very often automagically.
+
+2002-08-22 13:10  mbr
+
+	* cfg.c, cfg.h, tpb.c:
+
+	add: switch to turn off power management messages on osd. Handy when using
+	     apmiser, which changes powermanagement very often automagically.
+	fix: Compiled with -Wall and I was shocked. Killed warnings :)
+
+2002-07-23 15:16  mbr
+
+	* tpb.1:
+
+	chg: added a remark, that write access to nvram is nedded for software mixer
+
+2002-07-23 15:12  mbr
+
+	* debian/changelog:
+
+	chg: updated for release 0.3.0
+
+2002-07-23 15:05  mbr
+
+	* tpb.c:
+
+	fix: display volume in verbose mode as percentage.
+
+2002-07-21 10:15  mbr
+
+	* tpb.c:
+
+	fix: close mixer device after setting volume
+	fix: error checking when closing nvram device
+
+2002-07-20 23:46  mbr
+
+	* cfg.c, cfg.h, tpb.1, tpb.c, tpb.h, tpbrc:
+
+	add: support for oss software mixer. useful for models where the volume
+	     buttons are not connected to a hardware mixer (R31 is reported to show
+	     this behavior)
+
+2002-07-12 10:09  mbr
+
+	* debian/tpb.postinst:
+
+	chg: use group thinkpad instead of tpb for nvram device. Makes more sense.
+
+2002-07-12 09:14  mbr
+
+	* README:
+
+	ifix: typo
+
+2002-07-11 16:00  mbr
+
+	* debian/: conffiles, control, rules, tpb.config, tpb.postinst,
+	  tpb.postrm.debhelper, tpb.templates:
+
+	add: global configuration file is now part of debian package
+	add: if the needed device /dev/nvram does not exist, it is generated
+
+2002-07-11 15:31  mbr
+
+	* debian/tpb.substvars:
+
+	chg: this file is automatically generated. No need for revision control.
+
+2002-07-11 14:06  mbr
+
+	* Makefile.am, debian/rules:
+
+	add: include the default configuration /etc/tpbrc in debian package.
+
+2002-07-11 13:39  mbr
+
+	* cfg.c, cfg.h, tpb.1, tpb.c:
+
+	add: now tpb also reads a global configuration file (/etc/tpbrc)
+	fix: moved all access to osd member of config struct in
+	     #ifdef HAVE_LIBXOSD section
+
+2002-07-11 13:23  mbr
+
+	* debian/files:
+
+	chg: this file is automatically generated. No need for revision control.
+
+2002-07-11 13:09  mbr
+
+	* cfg.c, tpb.c:
+
+	fix: open of the nvram device used still the define of the default value
+	     instead of the value in config struct.
+	chg: replace perror() with fprintf()/perror() combination for more useful
+	     error messages.
+	chg: error message is now printed outside of parse_cfg_file(). This saves
+	     open() and close() call in main.
+
+2002-07-09 14:05  mbr
+
+	* cfg.c, tpb.1, tpb.c:
+
+	add: command line option to include additional configuration files
+
+2002-07-09 12:23  mbr
+
+	* Makefile.am, README, cfg.c, cfg.h, tpb.1, tpb.c, tpb.h, tpbrc,
+	  debian/changelog, debian/docs, debian/files:
+
+	add: support for configuration file
+	add: example for configuration file
+
+2002-07-04 11:18  mbr
+
+	* debian/: changelog, control, copyright, dirs, docs, files, menu,
+	  rules, tpb.postinst.debhelper, tpb.prerm.debhelper,
+	  tpb.substvars, watch:
+
+	add: support for building a debian package
+
+2002-07-03 17:17  mbr
+
+	* nvram.txt, tpb.c, tpb.h:
+
+	fix: the bit for the ThinkPad button is resetted when returning from
+	     hibernation. This was interpreted as "button pressed" and the
+	     application was started.
+
+2002-06-27 16:12  mbr
+
+	* configure.in:
+
+	add: added all headers included by tpb.
+
+2002-06-27 15:42  mbr
+
+	* Makefile:
+
+	del: removed because it is now generated by automake and autoconf
+
+2002-06-27 15:21  mbr
+
+	* README, Makefile.am, configure.in:
+
+	add: basic support for automake and autoconf
+
+2002-06-27 15:21  mbr
+
+	* tpb.1:
+
+	chg: changed example invocation to a more useful one
+
+2002-06-27 15:19  mbr
+
+	* tpb.c:
+
+	fix: compile error when HAVE_LIBXOSD not defined
+	add: basic support for automake and autoconf
+
+2002-06-27 15:17  mbr
+
+	* tpb.h:
+
+	add: define to prevent errors when included several times
+
+2002-06-24 10:32  mbr
+
+	* README:
+
+	add: info about xosd
+
+2002-06-23 13:35  mbr
+
+	* Makefile, README, nvram.txt, tpb.1, tpb.c, tpb.h:
+
+	add: on-screen display for volume, brightness and other things
+	add: man page
+	chg: moved the nvram byte description from tpb.c nvram.txt
+
+2002-06-23 13:07  mbr
+
+	* COPYING, Makefile, README, TODO, tpb.c, tpb.h:
+
+	Initial version
+

@@ -1,0 +1,352 @@
+.TH TPB 1 "25 Juli 2005" "0.6.4"
+.SH NAME
+tpb \- program to use the IBM ThinkPad (tm) special keys
+.SH SYNOPSIS
+.B tpb [options]
+.SH DESCRIPTION
+With TPB it is possible to bind a program to the ThinkPad, Mail, Home and Search button.
+TPB can also run a callback program on each state change with the changed state and the new state as options. 
+So it is possible to trigger several actions on different events.
+TPB	has a on-screen display (OSD) to show volume, mute, brightness and some other informations.
+Furthermore TPB supports a software mixer, as the R series ThinkPads have no hardware mixer to change the volume.
+.SH OPTIONS
+.TP 8
+.B \-h, \-\-help
+Display help.
+.TP 8
+.B \-d, \-\-daemon
+Startup as daemon.
+.TP 8
+.B \-c, \-\-config=FILE
+Read FILE as additional configuration file.
+.TP 8
+.B \-A, \-\-apm=STATE
+Some ThinkPads generate mouse and keyboard events or have a high CPU load when polling /proc/apm.
+You may enable this, if you want the AC connected/AC disconnected messages.
+Default is off.
+.TP 8
+.B \-P, \-\-powermgt=STATE
+The program apmiser (part of tpctl package) switches the power management mode according to the needs of the user.
+This results in lots of changes displayed in OSD.
+To avoid this, the power management messages can be turned off.
+Default is auto.
+.TP 8
+.B \-x, \-\-xevents=STATE
+Some of the special keys generate X11 events instead of changing the nvram.
+TPB is able to grab those keys and run an application.
+In general events are only grabbed for keys for which a command is assigned or if the callback script is configured.
+However some people like to use the X11 events through xmodmap or the like.
+This option turns off the grabbing of all events regardless if they are configured or not.
+Affected keys are HOME, SEARCH, MAIL, FAVORITES, RELOAD, ABORT, BACKWARD, FORWARD and FN.
+Default is on.
+.TP 8
+.B \-m, \-\-mixer=STATE
+Use OSS mixer to change volume and for mute/unmute.
+This should be use on models with no hardware mixer (volume and mute buttons show no effect).
+R31 is reported to have no hardware mixer.
+To use this you must enable write access to the NVRAM device (possibly dangerous).
+Possible values are on and off.
+Default is off.
+.TP 8
+.B \-o, \-\-osd=STATE
+Show on-screen display for volume, mute and brightness.
+Possible values are on and off.
+Default is on.
+.TP 8
+.B \-p, \-\-poll=DELAY
+Set delay between polls in microseconds.
+Default is 200000.
+.TP 8
+.B \-t, \-\-thinkpad=CMD
+String with command and options that should be executed when ThinkPad button is pressed.
+It is possible to execute any program.
+The program needs to include the complete path to the executable.
+By default no command is executed.
+.TP 8
+.B \-H, \-\-home=CMD
+String with command and options that should be executed when Home button is pressed.
+By default no command is executed.
+.TP 8
+.B \-S, \-\-search=CMD
+String with command and options that should be executed when Search button is pressed.
+By default no command is executed.
+.TP 8
+.B \-M, \-\-mail=CMD
+String with command and options that should be executed when Mail button is pressed.
+By default no command is executed.
+.TP 8
+.B \-W, \-\-wireless=CMD
+String with command and options that should be executed when Wireless button is pressed.
+By default no command is executed.
+.TP 8
+.B \-C, \-\-callback=CMD
+String with command and options that should be executed each button press and state change.
+tpb passes an identifier as first argument and the new state as second argument to the callback.
+So you can do fancy things :) By default no command is executed.
+.TP 8
+.B \-v, \-\-verbose
+Print information about pressed keys.
+.SH CONFIGURATION FILE
+The default values of tpb can be overridden using a configuration file.
+The priority of the configuration options is:
+.TP
+\(bu
+builtin defaults
+.TP
+\(bu
+configuration in /etc/tpbrc
+.TP
+\(bu
+configuration in $HOME/.tpbrc
+.TP
+\(bu
+configuration in file given with '\-\-config' command line option
+.TP
+\(bu
+command line options
+.PP
+tpb searches for the file '~/.tpbrc'.
+The configuration consists of lines of the form:
+.sp
+.RS
+.nf
+# COMMENT
+
+KEYWORD ARGUMENT # COMMENT
+.fi
+.sp
+.RE
+Keywords are:
+
+.TP 8
+.B NVRAM
+Should define the nvram device from where the information about the key states
+is read. Default is to try /dev/nvram, followed by /dev/misc/nvram.
+.TP 8
+.B POLLTIME
+Defines the delay between polls in microseconds.
+Default is 200000.
+.TP 8
+.B THINKPAD
+String with command and options that should be executed when ThinkPad button is pressed.
+It is possible to execute any program.
+By default no command is executed.
+.TP 8
+.B HOME
+String with command and options that should be executed when Home button is pressed (only available on A and S series).
+By default no command is executed.
+.TP 8
+.B SEARCH
+String with command and options that should be executed when Search button is pressed (only available on A and S series).
+By default no command is executed.
+.TP 8
+.B MAIL
+String with command and options that should be executed when Mail button is pressed(only available on A and S series).
+By default no command is executed.
+.TP 8
+.B FAVORITES
+String with command and options that should be executed when Favorites button is pressed (only available on A series).
+By default no command is executed.
+.TP 8
+.B RELOAD
+String with command and options that should be executed when Reload button is pressed (only available on A series).
+By default no command is executed.
+.TP 8
+.B ABORT
+String with command and options that should be executed when Abort button is pressed (only available on A series).
+By default no command is executed.
+.TP 8
+.B BACKWARD
+String with command and options that should be executed when Backward button is pressed (only available on A series).
+By default no command is executed.
+.TP 8
+.B FORWARD
+String with command and options that should be executed when Forward button is pressed (only available on A series).
+By default no command is executed.
+.TP 8
+.B FN
+String with command and options that should be executed when Fn button is pressed.
+This is only triggered, when Fn is released again and it was not used for a key combination.
+By default no command is executed.
+.TP 8
+.B CALLBACK
+String with command and options that should be executed each button press and state change.
+tpb passes an identifier as first argument and the new state as second argument to the callback.
+So you can do fancy things :) By default no command is executed.
+Supported identifiers and states are:
+
+.nf
+IDENTIFIER        STATES/VALUE
+thinkpad          pressed
+home              pressed
+search            pressed
+mail              pressed
+favorites         pressed
+reload            pressed
+abort             pressed
+backward          pressed
+forward           pressed
+fn                pressed
+zoom              on, off
+thinklight        on, off
+display           lcd, crt, both
+expand            on, off
+brightness        PERCENT
+volume            PERCENT
+mute              on, off
+ac_power          connected, disconnected
+powermgt_ac       high, auto, manual
+powermgt_battery  high, auto, manual
+.fi
+
+.TP 8
+.B MIXER
+Use OSS mixer to change volume and for mute/unmute.
+This should be use on models with no hardware mixer (volume and mute buttons show no effect).
+R31 is reported to have no hardware mixer.
+To use this you must enable write access to the NVRAM device (possibly dangerous).
+Possible values are on and off.
+Default is off.
+.TP 8
+.B MIXERSTEPS
+Defines how much steps should be available when using the OSS mixer.
+Default is 14.
+If an other number of steps is used, tpb needs write access to the nvram device.
+.TP 8
+.B MIXERDEV
+Defines the mixer device to use for OSS mixer support.
+Default is /dev/mixer.
+.TP 8
+.B APM
+Some ThinkPads generate mouse and keyboard events or have a high CPU load when polling /proc/apm.
+You may enable this, if you want the AC connected/AC disconnected messages.
+Default is off.
+.TP 8
+.B POWERMGT
+The program apmiser (part of tpctl package) switches the power management mode according to the needs of the user.
+This results in lots of changes displayed in OSD.
+To avoid this, the power management messages can be turned off.
+Default is auto.
+.TP 8
+.B XEVENTS
+Some of the special keys generate X11 events instead of changing the nvram.
+TPB is able to grab those keys and run an application.
+In general events are only grabbed for keys for which a command is assigned or if the callback script is configured.
+However some people like to use the X11 events through xmodmap or the like.
+This option turns off the grabbing of all events regardless if they are configured or not.
+Affected keys are HOME, SEARCH, MAIL, FAVORITES, RELOAD, ABORT, BACKWARD, FORWARD and FN.
+Default is on.
+.TP 8
+.B OSD
+Show on-screen display for volume, mute and brightness.
+Possible values are on and off.
+Default is on.
+.TP 8
+.B OSDZOOM
+Specific switch for showing on-screen display for zoom button.
+Possible values are on and off.
+Default is unset, follows the OSD option.
+.TP 8
+.B OSDTHINKLIGHT
+Specific switch for showing on-screen display for thinklight button.
+Possible values are on and off.
+Default is unset, follows the OSD option.
+.TP 8
+.B OSDDISPLAY
+Specific switch for showing on-screen display for display output button.
+Possible values are on and off.
+Default is unset, follows the OSD option.
+.TP 8
+.B OSDHVEXPANSION
+Specific switch for showing on-screen display for HV expansion button.
+Possible values are on and off.
+Default is unset, follows the OSD option.
+.TP 8
+.B OSDBRIGHTNESS
+Specific switch for showing on-screen display for brightness buttons.
+Possible values are on and off.
+Default is unset, follows the OSD option.
+.TP 8
+.B OSDVOLUME
+Specific switch for showing on-screen display for ivolume and mute buttons.
+Possible values are on and off.
+Default is unset, follows the OSD option.
+.TP 8
+.B OSDPOWERMGT
+Specific switch for showing on-screen display for ipower management changes.
+Possible values are on and off.
+Default is unset, follows the OSD option.
+.TP 8
+.B OSDFONT
+Defines the font for the on-screen display.
+You may use "xfontsel" to choose one.
+Default is the default font of the xosd library.
+.TP 8
+.B OSDCOLOR
+Defines the color of the on-screen display.
+You may use "xcolors" to choose one.
+Default is BLUE.
+.TP 8
+.B OSDTIMEOUT
+Defines how long (in seconds) the on-screen display is shown after the last keys was pressed.
+Default is 3.
+.TP 8
+.B OSDOFFSET
+For backward compatibility.
+Same as OSDVERTICAL.
+.TP 8
+.B OSDSHADOW
+Defines the offset of the font shadow in pixels.
+Default is 2.
+.TP 8
+.B OSDSHADOWCOLOR
+Defines the color of the shadow of the on-screen display. You may use "xcolors" to choose one.
+Default is BLACK.
+.TP 8
+.B OSDOUTLINE
+Defines the width of the font outline in pixels.
+Default is 1.
+.TP 8
+.B OSDOUTLINECOLOR
+Defines the color of the outline of the on-screen display.
+You may use "xcolors" to choose one.
+Default is BLACK.
+.TP 8
+.B OSDVERTICAL
+Defines the offset from the top or bottom of the screen in pixels.
+Default is 25.
+.TP 8
+.B OSDHORIZONTAL
+Defines the offset from the left or right of the screen in pixels.
+Only supported by xosd 2.0.0 and above.
+Default is 25.
+.TP 8
+.B OSDPOS
+Defines where the osd is shown.
+Possible values are top, middle and bottom.
+The value middle is only supported by xosd 2.0.0 and above.
+Default is bottom.
+.TP 8
+.B OSDALIGN
+Defines the alignment of the osd.
+Possible values are left, center and right.
+Default is left.
+.SH "NOTES"
+Requires NVRAM device /dev/nvram.
+This must be enabled in your kernel.
+Although the device file must exist.
+The device file could be created with \'mknod /dev/nvram c 10 144\'
+
+This program was developed on a Thinkpad Model T21.
+.SH EXAMPLE
+tpb \-\-osd=off \-\-verbose \-\-thinkpad="xterm \-T ntpctl \-e ntpctl"
+.SH COPYRIGHT
+Copyright 2002-2005, Markus Braun <markus.braun@krawel.de>
+.PP
+Licensed under GNU GPL version 2 or later.
+This is free software;
+see the source for copying conditions.
+There is NO warranty;
+not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+.SH AUTHOR
+Written by Markus Braun

@@ -1,0 +1,19 @@
+Template: tpb/groupchanged
+Type: note
+_Description: Group for tpb users changed!
+ The group of the device file used by tpb changed. Note that you have
+ to move the tpb users from the old group "thinkpad" to the new group "nvram"!
+
+Template: tpb/makedev
+Type: boolean
+Default: true
+_Description: Create special device file?
+ tpb needs a special device file to access the information about pressed
+ buttons. Users who should be able to use tpb must be in the group nvram.
+
+Template: tpb/autostart
+Type: boolean
+Default: true
+_Description: Start tpb automatically?
+ tpb can be started automatically after X has been started for a user.
+ That can be either after startx from console or after login with a display manager.

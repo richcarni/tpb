@@ -1,0 +1,11 @@
+People that have contributed to the project, one way or another. Friends!
+
+Markus Braun           Originator, project manager, Code for T, A, R Series
+Robin Stephenson       Code to support S Series Thinkpads
+Jes R. Lungskov        Danish translation
+Dag Wieers             Spec file for rpm
+Chris Halls            Patch for runtime autoprobe of devfs
+Michael Stuermer       Patch to grab X events for configured keys only
+Grigory Batalov        Russian translation
+Soren S. Jorvang       Patch that makes tpb compile and run on NetBSD
+Mika Fischer           Patch to enable Wireless key combo
